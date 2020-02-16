@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#5F9EA0;">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:#5F9EA0;">
         <div class="container d-flex justify-content-between">
             <a href="#" class="navbar-brand d-flex align-items-center">
                 <img src="logo/logo_sc.png" width="50" class="mr-2">
