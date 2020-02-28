@@ -1,3 +1,9 @@
+<?php 
+    include "controller.php";
+    $action = new Action();
+    session_start();
+?>
+
 <!doctype html>
 <html lang="en">
 
