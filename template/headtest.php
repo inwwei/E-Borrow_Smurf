@@ -13,6 +13,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.6">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Carousel Template · Bootstrap</title>
 
     <link rel="stylesheet" type="text/css" href="UI.css">
@@ -22,7 +23,7 @@
 
 </head>
 
-<body class="bgm">
+<body >
 
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top  grad">
