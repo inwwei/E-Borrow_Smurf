@@ -5,8 +5,8 @@
 
     <!--------------------Header---------------------------->
 
-      <!----ส่วนที่ใช้ดึงข้อมูล---->
-      <?php
+    <!----ส่วนที่ใช้ดึงข้อมูล---->
+    <?php
 	ini_set('display_errors', 1);
 	error_reporting(~0);
 	date_default_timezone_set("Asia/Bangkok");
@@ -29,7 +29,7 @@
 	}
 ?>
 
-<?php
+    <?php
 	ini_set('display_errors', 1);
 	error_reporting(~0);
 	date_default_timezone_set("Asia/Bangkok");
@@ -41,14 +41,14 @@
 	}
 ?>
     <?php
-//    $serverName = "localhost";
-//    $userName = "root";
-//    $userPassword = "";
+   $serverName = "localhost";
+   $userName = "root";
+   $userPassword = "";
 
-   $serverName = "10.199.66.227";
-   $userName = "20S2_g4";
-   $userPassword = "Dwg7Q6UQ";
-   $dbName = "20s2_g4";
+//    $serverName = "10.199.66.227";
+//    $userName = "20S2_g4";
+//    $userPassword = "Dwg7Q6UQ";
+   $dbName = "20S2_g4";
     $conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
     mysqli_set_charset($conn, "utf8");
 	$sql = "SELECT item.IDs,item.ItemID,item.ItemName,type.TypeName,item.Status,item.Building FROM item , type where item.TypeID = type.ID AND ItemName LIKE '%".$sechKeyword."%'AND Status LIKE '%".$strKeyword."%'AND TypeName LIKE '%".$TypKeyword."%'"   ;
@@ -104,14 +104,16 @@
                     <!--ส่วนค้นหารายการ
                     <input class="form-control " name="secKeyword" type="text" id="secKeyword"
                         placeholder="กรอกชื่ออุปกรณ์ที่จะค้นหา" value="">&nbsp;&nbsp;-->
-                    <button type="submit" class="btn btn-secondary my-1" id="search">ค้นหา</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="submit" class="btn btn-secondary my-1"
+                        id="search">ค้นหา</button>&nbsp;&nbsp;&nbsp;&nbsp;
                 </form><br>
             </div>
+
         </div><br>
         <!--ส่วนตารางเเสดงข้อมูล-->
-        
-        <table  class="table container center tcenter newfont">
-            <tr class="bg-warning">
+
+        <table class="table container center tcenter newfont">
+            <tr style="background-color: #ff9999">
                 <th scope="col" class="zen" style="width: 10px;">ลำดับ</th>
                 <th scope="col" class="zen" style="width: 150px;">รหัสครุภัณฑ์</th>
                 <th scope="col" class="zen" style="width: 290px;">รายละเอียด</th>
@@ -121,34 +123,32 @@
                 <th scope="col" class="zen" style="width: 120px;"></th>
             </tr>
         </table>
-            
+
         <div style=" height: 400px; overflow-y: scroll;">
 
-        <table class="table container center table-hover">
+            <table class="table container center table-hover">
 
-            <?php 
-               $NameBer=1;
+                <?php 
 				$temp=0;
 				while($row=mysqli_fetch_array($query,MYSQLI_ASSOC)){ ?>
                 <tr>
-                    <td  class="zen tcenter" style="width: 65px;"><?=  "$NameBer"; ?></td>
-                    <td  class="zen tcenter" style="width: 150px;"><?=$row['ItemID']?></td>
-                    <td  class="zen " style="width: 285px;"><?=$row['ItemName']?></td>
-                    <td  class="zen tcenter" style="width: 150px;"><?=$row['TypeName']?></td>
-                    <td  class="zen tcenter" style="width: 85px;"><?=$row['Status']?></td>
-                    <td  class="zen tcenter"style="width: 105px;"><?=$row['Building']?></td>
+                    <td class="zen tcenter" style="width: 65px;"><?=$row['IDs']?></td>
+                    <td class="zen tcenter" style="width: 150px;"><?=$row['ItemID']?></td>
+                    <td class="zen " style="width: 285px;"><?=$row['ItemName']?></td>
+                    <td class="zen tcenter" style="width: 150px;"><?=$row['TypeName']?></td>
+                    <td class="zen tcenter" style="width: 85px;"><?=$row['Status']?></td>
+                    <td class="zen tcenter" style="width: 105px;"><?=$row['Building']?></td>
                     <td scope="row" class="zen tcenter" style="width: 100px;"><button name="lent" type="submit"
-                                class="btn btn-secondary mb-2">ยืม</button>
+                            class="btn btn-secondary mb-2">ยืม</button>
                 </tr>
 
                 <?php
-                $NameBer++;
 				$temp++;
 				}?>
                 <?php if ($temp == 0){
 					echo  "<p> <font color=red font face='verdana' size='5pt'>ไม่มีรายการอุปกรณ์ที่ค้นหา</font> </p>";
 				} ?>
-            
+
             </table>
         </div>
 
