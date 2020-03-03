@@ -1,0 +1,1377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.1 on win32)" generated="20200303 23:18:41.590" rpa="false">
+<suite id="s1" name="Testsmurf" source="C:\Users\Jel\Downloads\testsmurf.robot">
+<test id="s1-t1" name="TC01(TestScenario1)">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200303 23:18:41.752" level="INFO">Opening browser 'chrome' to base url 'http://10.199.66.227/SoftEn2020/Sec02/Smurf/template/Maintain.php'.</msg>
+<status status="PASS" starttime="20200303 23:18:41.752" endtime="20200303 23:19:05.621"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20200303 23:19:05.621" endtime="20200303 23:19:05.622"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<msg timestamp="20200303 23:19:05.732" level="INFO">Current location is 'http://10.199.66.227/SoftEn2020/Sec02/Smurf/template/Maintain.php'.</msg>
+<status status="PASS" starttime="20200303 23:19:05.622" endtime="20200303 23:19:05.732"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>TC01[TestScenario1].jpg</arg>
+</arguments>
+<msg timestamp="20200303 23:19:06.143" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="TC01%5BTestScenario1%5D.jpg"&gt;&lt;img src="TC01%5BTestScenario1%5D.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20200303 23:19:06.143" level="INFO">c:\users\jel\appdata\local\programs\python\python38-32\lib\site-packages\selenium\webdriver\remote\webdriver.py:1030: UserWarning: name used for saved screenshot does not match file type. It should end with a `.png` extension
+  warnings.warn("name used for saved screenshot does not match file "</msg>
+<status status="PASS" starttime="20200303 23:19:05.732" endtime="20200303 23:19:06.144"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200303 23:19:06.145" endtime="20200303 23:19:08.296"></status>
+</kw>
+<status status="PASS" starttime="20200303 23:18:41.751" endtime="20200303 23:19:08.297" critical="yes"></status>
+</test>
+<test id="s1-t2" name="TC01(TestScenario2)">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200303 23:19:08.299" level="INFO">Opening browser 'chrome' to base url 'http://10.199.66.227/SoftEn2020/Sec02/Smurf/template/Maintain.php'.</msg>
+<status status="PASS" starttime="20200303 23:19:08.299" endtime="20200303 23:19:39.467"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20200303 23:19:39.467" endtime="20200303 23:19:39.468"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<msg timestamp="20200303 23:19:39.574" level="INFO">Current location is 'http://10.199.66.227/SoftEn2020/Sec02/Smurf/template/Maintain.php'.</msg>
+<status status="PASS" starttime="20200303 23:19:39.468" endtime="20200303 23:19:39.574"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>5602130000087</arg>
+</arguments>
+<status status="PASS" starttime="20200303 23:19:39.574" endtime="20200303 23:19:39.690"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>TC01[TestScenario2].jpg</arg>
+</arguments>
+<msg timestamp="20200303 23:19:40.083" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="TC01%5BTestScenario2%5D.jpg"&gt;&lt;img src="TC01%5BTestScenario2%5D.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200303 23:19:39.690" endtime="20200303 23:19:40.083"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200303 23:19:40.084" endtime="20200303 23:19:42.230"></status>
+</kw>
+<status status="PASS" starttime="20200303 23:19:08.298" endtime="20200303 23:19:42.230" critical="yes"></status>
+</test>
+<test id="s1-t3" name="TC02(TestScenario2)">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200303 23:19:42.233" level="INFO">Opening browser 'chrome' to base url 'http://10.199.66.227/SoftEn2020/Sec02/Smurf/template/Maintain.php'.</msg>
+<status status="PASS" starttime="20200303 23:19:42.232" endtime="20200303 23:19:57.668"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20200303 23:19:57.668" endtime="20200303 23:19:57.669"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<msg timestamp="20200303 23:19:57.776" level="INFO">Current location is 'http://10.199.66.227/SoftEn2020/Sec02/Smurf/template/Maintain.php'.</msg>
+<status status="PASS" starttime="20200303 23:19:57.669" endtime="20200303 23:19:57.776"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>ชุดคอมพิวเตอร์ประมวลผลระดับสูง 1 ชุด</arg>
+</arguments>
+<status status="PASS" starttime="20200303 23:19:57.776" endtime="20200303 23:19:57.892"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>TC02[TestScenario2].jpg</arg>
+</arguments>
+<msg timestamp="20200303 23:19:58.295" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="TC02%5BTestScenario2%5D.jpg"&gt;&lt;img src="TC02%5BTestScenario2%5D.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200303 23:19:57.892" endtime="20200303 23:19:58.295"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200303 23:19:58.296" endtime="20200303 23:20:00.444"></status>
+</kw>
+<status status="PASS" starttime="20200303 23:19:42.232" endtime="20200303 23:20:00.445" critical="yes"></status>
+</test>
+<test id="s1-t4" name="TC03(TestScenario2)">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200303 23:20:00.447" level="INFO">Opening browser 'chrome' to base url 'http://10.199.66.227/SoftEn2020/Sec02/Smurf/template/Maintain.php'.</msg>
+<status status="PASS" starttime="20200303 23:20:00.447" endtime="20200303 23:20:10.231"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20200303 23:20:10.232" endtime="20200303 23:20:10.232"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<msg timestamp="20200303 23:20:10.339" level="INFO">Current location is 'http://10.199.66.227/SoftEn2020/Sec02/Smurf/template/Maintain.php'.</msg>
+<status status="PASS" starttime="20200303 23:20:10.233" endtime="20200303 23:20:10.339"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>ครุภัณฑ์คอมพิวเตอร์</arg>
+</arguments>
+<status status="PASS" starttime="20200303 23:20:10.339" endtime="20200303 23:20:10.456"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>TC03[TestScenario2].jpg</arg>
+</arguments>
+<msg timestamp="20200303 23:20:10.849" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="TC03%5BTestScenario2%5D.jpg"&gt;&lt;img src="TC03%5BTestScenario2%5D.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200303 23:20:10.456" endtime="20200303 23:20:10.849"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200303 23:20:10.849" endtime="20200303 23:20:13.009"></status>
+</kw>
+<status status="PASS" starttime="20200303 23:20:00.446" endtime="20200303 23:20:13.009" critical="yes"></status>
+</test>
+<test id="s1-t5" name="TC04(TestScenario2)">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200303 23:20:13.011" level="INFO">Opening browser 'chrome' to base url 'http://10.199.66.227/SoftEn2020/Sec02/Smurf/template/Maintain.php'.</msg>
+<status status="PASS" starttime="20200303 23:20:13.010" endtime="20200303 23:20:33.168"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20200303 23:20:33.168" endtime="20200303 23:20:33.169"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<msg timestamp="20200303 23:20:33.275" level="INFO">Current location is 'http://10.199.66.227/SoftEn2020/Sec02/Smurf/template/Maintain.php'.</msg>
+<status status="PASS" starttime="20200303 23:20:33.169" endtime="20200303 23:20:33.275"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>ปกติ</arg>
+</arguments>
+<status status="PASS" starttime="20200303 23:20:33.276" endtime="20200303 23:20:33.396"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>TC04[TestScenario2].jpg</arg>
+</arguments>
+<msg timestamp="20200303 23:20:33.807" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="TC04%5BTestScenario2%5D.jpg"&gt;&lt;img src="TC04%5BTestScenario2%5D.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200303 23:20:33.396" endtime="20200303 23:20:33.807"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200303 23:20:33.808" endtime="20200303 23:20:35.972"></status>
+</kw>
+<status status="PASS" starttime="20200303 23:20:13.010" endtime="20200303 23:20:35.972" critical="yes"></status>
+</test>
+<test id="s1-t6" name="TC05(TestScenario2)">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200303 23:20:35.972" level="INFO">Opening browser 'chrome' to base url 'http://10.199.66.227/SoftEn2020/Sec02/Smurf/template/Maintain.php'.</msg>
+<status status="PASS" starttime="20200303 23:20:35.972" endtime="20200303 23:20:59.633"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20200303 23:20:59.633" endtime="20200303 23:20:59.633"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<msg timestamp="20200303 23:20:59.740" level="INFO">Current location is 'http://10.199.66.227/SoftEn2020/Sec02/Smurf/template/Maintain.php'.</msg>
+<status status="PASS" starttime="20200303 23:20:59.633" endtime="20200303 23:20:59.740"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>749000</arg>
+</arguments>
+<status status="PASS" starttime="20200303 23:20:59.740" endtime="20200303 23:20:59.857"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>TC05[TestScenario2].jpg</arg>
+</arguments>
+<msg timestamp="20200303 23:21:00.239" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="TC05%5BTestScenario2%5D.jpg"&gt;&lt;img src="TC05%5BTestScenario2%5D.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200303 23:20:59.857" endtime="20200303 23:21:00.239"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200303 23:21:00.239" endtime="20200303 23:21:02.394"></status>
+</kw>
+<status status="PASS" starttime="20200303 23:20:35.972" endtime="20200303 23:21:02.394" critical="yes"></status>
+</test>
+<test id="s1-t7" name="TC01(TestScenario3)(valid)">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200303 23:21:02.397" level="INFO">Opening browser 'chrome' to base url 'http://10.199.66.227/SoftEn2020/Sec02/Smurf/template/Maintain.php'.</msg>
+<status status="PASS" starttime="20200303 23:21:02.396" endtime="20200303 23:21:13.628"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20200303 23:21:13.628" endtime="20200303 23:21:13.629"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<msg timestamp="20200303 23:21:13.738" level="INFO">Current location is 'http://10.199.66.227/SoftEn2020/Sec02/Smurf/template/Maintain.php'.</msg>
+<status status="PASS" starttime="20200303 23:21:13.629" endtime="20200303 23:21:13.738"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>add</arg>
+</arguments>
+<msg timestamp="20200303 23:21:13.738" level="INFO">Clicking button 'add'.</msg>
+<status status="PASS" starttime="20200303 23:21:13.738" endtime="20200303 23:21:15.069"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div[1]/div[2]/form/details[1]/summary/strong</arg>
+</arguments>
+<msg timestamp="20200303 23:21:15.070" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[1]/div[2]/form/details[1]/summary/strong'.</msg>
+<status status="PASS" starttime="20200303 23:21:15.069" endtime="20200303 23:21:15.328"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div[1]/div[2]/form/details[1]/div/div[2]/div/div[1]/select/option[14]</arg>
+</arguments>
+<msg timestamp="20200303 23:21:15.328" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[1]/div[2]/form/details[1]/div/div[2]/div/div[1]/select/option[14]'.</msg>
+<status status="PASS" starttime="20200303 23:21:15.328" endtime="20200303 23:21:15.568"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>ItemID</arg>
+<arg>5602070000053</arg>
+</arguments>
+<msg timestamp="20200303 23:21:15.569" level="INFO">Typing text '5602070000053' into text field 'ItemID'.</msg>
+<status status="PASS" starttime="20200303 23:21:15.568" endtime="20200303 23:21:15.992"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>ItemName</arg>
+<arg>Iphone7</arg>
+</arguments>
+<msg timestamp="20200303 23:21:15.993" level="INFO">Typing text 'Iphone7' into text field 'ItemName'.</msg>
+<status status="PASS" starttime="20200303 23:21:15.992" endtime="20200303 23:21:16.393"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>Detail</arg>
+<arg>Ram 1 GB CPUcorei3 270GHz</arg>
+</arguments>
+<msg timestamp="20200303 23:21:16.393" level="INFO">Typing text 'Ram 1 GB CPUcorei3 270GHz' into text field 'Detail'.</msg>
+<status status="PASS" starttime="20200303 23:21:16.393" endtime="20200303 23:21:16.818"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>Price</arg>
+<arg>21000</arg>
+</arguments>
+<msg timestamp="20200303 23:21:16.819" level="INFO">Typing text '21000' into text field 'Price'.</msg>
+<status status="PASS" starttime="20200303 23:21:16.819" endtime="20200303 23:21:17.191"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>Building</arg>
+<arg>6021</arg>
+</arguments>
+<msg timestamp="20200303 23:21:17.192" level="INFO">Typing text '6021' into text field 'Building'.</msg>
+<status status="PASS" starttime="20200303 23:21:17.192" endtime="20200303 23:21:17.562"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div[1]/div[2]/form/details[1]/div/div[2]/div/div[7]/select/option[1]</arg>
+</arguments>
+<msg timestamp="20200303 23:21:17.563" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[1]/div[2]/form/details[1]/div/div[2]/div/div[7]/select/option[1]'.</msg>
+<status status="PASS" starttime="20200303 23:21:17.562" endtime="20200303 23:21:17.794"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div[1]/div[2]/form/details[2]/summary/strong</arg>
+</arguments>
+<msg timestamp="20200303 23:21:17.794" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[1]/div[2]/form/details[2]/summary/strong'.</msg>
+<status status="PASS" starttime="20200303 23:21:17.794" endtime="20200303 23:21:18.037"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>birthdaytime</arg>
+<arg>29022020</arg>
+</arguments>
+<msg timestamp="20200303 23:21:18.038" level="INFO">Typing text '29022020' into text field 'birthdaytime'.</msg>
+<status status="PASS" starttime="20200303 23:21:18.037" endtime="20200303 23:21:18.413"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div[1]/div[2]/form/details[2]/div/div[2]/select[1]/option[1]</arg>
+</arguments>
+<msg timestamp="20200303 23:21:18.413" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[1]/div[2]/form/details[2]/div/div[2]/select[1]/option[1]'.</msg>
+<status status="PASS" starttime="20200303 23:21:18.413" endtime="20200303 23:21:18.643"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div[1]/div[2]/form/details[2]/div/div[2]/select[2]/option[1]</arg>
+</arguments>
+<msg timestamp="20200303 23:21:18.643" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[1]/div[2]/form/details[2]/div/div[2]/select[2]/option[1]'.</msg>
+<status status="PASS" starttime="20200303 23:21:18.643" endtime="20200303 23:21:18.875"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div[1]/div[2]/form/details[2]/div/div[2]/select[3]/option[1]</arg>
+</arguments>
+<msg timestamp="20200303 23:21:18.876" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[1]/div[2]/form/details[2]/div/div[2]/select[3]/option[1]'.</msg>
+<status status="PASS" starttime="20200303 23:21:18.875" endtime="20200303 23:21:19.105"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>btnadd</arg>
+</arguments>
+<msg timestamp="20200303 23:21:19.106" level="INFO">Clicking button 'btnadd'.</msg>
+<status status="PASS" starttime="20200303 23:21:19.105" endtime="20200303 23:21:19.665"></status>
+</kw>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<doc>Handles the current alert and returns its message.</doc>
+<arguments>
+<arg>accept</arg>
+</arguments>
+<status status="PASS" starttime="20200303 23:21:19.665" endtime="20200303 23:21:19.974"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200303 23:21:19.974" endtime="20200303 23:21:22.133"></status>
+</kw>
+<status status="PASS" starttime="20200303 23:21:02.396" endtime="20200303 23:21:22.134" critical="yes"></status>
+</test>
+<test id="s1-t8" name="TC02(TestScenario3)(Invalid)">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200303 23:21:22.136" level="INFO">Opening browser 'chrome' to base url 'http://10.199.66.227/SoftEn2020/Sec02/Smurf/template/Maintain.php'.</msg>
+<status status="PASS" starttime="20200303 23:21:22.136" endtime="20200303 23:21:38.802"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20200303 23:21:38.802" endtime="20200303 23:21:38.802"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<msg timestamp="20200303 23:21:38.910" level="INFO">Current location is 'http://10.199.66.227/SoftEn2020/Sec02/Smurf/template/Maintain.php'.</msg>
+<status status="PASS" starttime="20200303 23:21:38.803" endtime="20200303 23:21:38.910"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>add</arg>
+</arguments>
+<msg timestamp="20200303 23:21:38.910" level="INFO">Clicking button 'add'.</msg>
+<status status="PASS" starttime="20200303 23:21:38.910" endtime="20200303 23:21:39.559"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div[1]/div[2]/form/details[1]/summary/strong</arg>
+</arguments>
+<msg timestamp="20200303 23:21:39.559" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[1]/div[2]/form/details[1]/summary/strong'.</msg>
+<status status="PASS" starttime="20200303 23:21:39.559" endtime="20200303 23:21:39.817"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div[1]/div[2]/form/details[1]/div/div[2]/div/div[1]/select/option[14]</arg>
+</arguments>
+<msg timestamp="20200303 23:21:39.817" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[1]/div[2]/form/details[1]/div/div[2]/div/div[1]/select/option[14]'.</msg>
+<status status="PASS" starttime="20200303 23:21:39.817" endtime="20200303 23:21:40.060"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>ItemID</arg>
+<arg>CS5602070000053</arg>
+</arguments>
+<msg timestamp="20200303 23:21:40.061" level="INFO">Typing text 'CS5602070000053' into text field 'ItemID'.</msg>
+<status status="PASS" starttime="20200303 23:21:40.061" endtime="20200303 23:21:40.490"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>ItemName</arg>
+<arg>Iphone7</arg>
+</arguments>
+<msg timestamp="20200303 23:21:40.490" level="INFO">Typing text 'Iphone7' into text field 'ItemName'.</msg>
+<status status="PASS" starttime="20200303 23:21:40.490" endtime="20200303 23:21:40.868"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>Detail</arg>
+<arg>Ram 1 GB CPUcorei3 270GHz</arg>
+</arguments>
+<msg timestamp="20200303 23:21:40.869" level="INFO">Typing text 'Ram 1 GB CPUcorei3 270GHz' into text field 'Detail'.</msg>
+<status status="PASS" starttime="20200303 23:21:40.868" endtime="20200303 23:21:41.285"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>Price</arg>
+<arg>21000</arg>
+</arguments>
+<msg timestamp="20200303 23:21:41.286" level="INFO">Typing text '21000' into text field 'Price'.</msg>
+<status status="PASS" starttime="20200303 23:21:41.286" endtime="20200303 23:21:41.660"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>Building</arg>
+<arg>6021</arg>
+</arguments>
+<msg timestamp="20200303 23:21:41.661" level="INFO">Typing text '6021' into text field 'Building'.</msg>
+<status status="PASS" starttime="20200303 23:21:41.660" endtime="20200303 23:21:42.027"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div[1]/div[2]/form/details[1]/div/div[2]/div/div[7]/select/option[1]</arg>
+</arguments>
+<msg timestamp="20200303 23:21:42.027" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[1]/div[2]/form/details[1]/div/div[2]/div/div[7]/select/option[1]'.</msg>
+<status status="PASS" starttime="20200303 23:21:42.027" endtime="20200303 23:21:42.257"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div[1]/div[2]/form/details[2]/summary/strong</arg>
+</arguments>
+<msg timestamp="20200303 23:21:42.258" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[1]/div[2]/form/details[2]/summary/strong'.</msg>
+<status status="PASS" starttime="20200303 23:21:42.257" endtime="20200303 23:21:42.499"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>birthdaytime</arg>
+<arg>29022020</arg>
+</arguments>
+<msg timestamp="20200303 23:21:42.499" level="INFO">Typing text '29022020' into text field 'birthdaytime'.</msg>
+<status status="PASS" starttime="20200303 23:21:42.499" endtime="20200303 23:21:42.876"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div[1]/div[2]/form/details[2]/div/div[2]/select[1]/option[1]</arg>
+</arguments>
+<msg timestamp="20200303 23:21:42.877" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[1]/div[2]/form/details[2]/div/div[2]/select[1]/option[1]'.</msg>
+<status status="PASS" starttime="20200303 23:21:42.877" endtime="20200303 23:21:43.105"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div[1]/div[2]/form/details[2]/div/div[2]/select[2]/option[1]</arg>
+</arguments>
+<msg timestamp="20200303 23:21:43.105" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[1]/div[2]/form/details[2]/div/div[2]/select[2]/option[1]'.</msg>
+<status status="PASS" starttime="20200303 23:21:43.105" endtime="20200303 23:21:43.338"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div[1]/div[2]/form/details[2]/div/div[2]/select[3]/option[1]</arg>
+</arguments>
+<msg timestamp="20200303 23:21:43.338" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[1]/div[2]/form/details[2]/div/div[2]/select[3]/option[1]'.</msg>
+<status status="PASS" starttime="20200303 23:21:43.338" endtime="20200303 23:21:43.567"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>btnadd</arg>
+</arguments>
+<msg timestamp="20200303 23:21:43.568" level="INFO">Clicking button 'btnadd'.</msg>
+<status status="PASS" starttime="20200303 23:21:43.568" endtime="20200303 23:21:44.030"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200303 23:21:44.030" endtime="20200303 23:21:46.189"></status>
+</kw>
+<status status="PASS" starttime="20200303 23:21:22.135" endtime="20200303 23:21:46.190" critical="yes"></status>
+</test>
+<test id="s1-t9" name="TC03(TestScenario3)(Invalid)">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200303 23:21:46.192" level="INFO">Opening browser 'chrome' to base url 'http://10.199.66.227/SoftEn2020/Sec02/Smurf/template/Maintain.php'.</msg>
+<status status="PASS" starttime="20200303 23:21:46.192" endtime="20200303 23:22:01.174"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20200303 23:22:01.174" endtime="20200303 23:22:01.174"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<msg timestamp="20200303 23:22:01.284" level="INFO">Current location is 'http://10.199.66.227/SoftEn2020/Sec02/Smurf/template/Maintain.php'.</msg>
+<status status="PASS" starttime="20200303 23:22:01.174" endtime="20200303 23:22:01.284"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>add</arg>
+</arguments>
+<msg timestamp="20200303 23:22:01.285" level="INFO">Clicking button 'add'.</msg>
+<status status="PASS" starttime="20200303 23:22:01.284" endtime="20200303 23:22:02.011"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div[1]/div[2]/form/details[1]/summary/strong</arg>
+</arguments>
+<msg timestamp="20200303 23:22:02.011" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[1]/div[2]/form/details[1]/summary/strong'.</msg>
+<status status="PASS" starttime="20200303 23:22:02.011" endtime="20200303 23:22:02.275"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div[1]/div[2]/form/details[1]/div/div[2]/div/div[1]/select/option[14]</arg>
+</arguments>
+<msg timestamp="20200303 23:22:02.276" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[1]/div[2]/form/details[1]/div/div[2]/div/div[1]/select/option[14]'.</msg>
+<status status="PASS" starttime="20200303 23:22:02.275" endtime="20200303 23:22:02.515"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>ItemID</arg>
+<arg>5602070000053</arg>
+</arguments>
+<msg timestamp="20200303 23:22:02.516" level="INFO">Typing text '5602070000053' into text field 'ItemID'.</msg>
+<status status="PASS" starttime="20200303 23:22:02.515" endtime="20200303 23:22:02.939"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>ItemName</arg>
+<arg>Iphone7</arg>
+</arguments>
+<msg timestamp="20200303 23:22:02.939" level="INFO">Typing text 'Iphone7' into text field 'ItemName'.</msg>
+<status status="PASS" starttime="20200303 23:22:02.939" endtime="20200303 23:22:03.314"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>Detail</arg>
+<arg>Ram 1 GB CPUcorei3 270GHz</arg>
+</arguments>
+<msg timestamp="20200303 23:22:03.314" level="INFO">Typing text 'Ram 1 GB CPUcorei3 270GHz' into text field 'Detail'.</msg>
+<status status="PASS" starttime="20200303 23:22:03.314" endtime="20200303 23:22:03.726"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>Price</arg>
+<arg>21000</arg>
+</arguments>
+<msg timestamp="20200303 23:22:03.727" level="INFO">Typing text '21000' into text field 'Price'.</msg>
+<status status="PASS" starttime="20200303 23:22:03.727" endtime="20200303 23:22:04.100"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>Building</arg>
+<arg>6021</arg>
+</arguments>
+<msg timestamp="20200303 23:22:04.101" level="INFO">Typing text '6021' into text field 'Building'.</msg>
+<status status="PASS" starttime="20200303 23:22:04.101" endtime="20200303 23:22:04.474"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div[1]/div[2]/form/details[1]/div/div[2]/div/div[7]/select/option[1]</arg>
+</arguments>
+<msg timestamp="20200303 23:22:04.474" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[1]/div[2]/form/details[1]/div/div[2]/div/div[7]/select/option[1]'.</msg>
+<status status="PASS" starttime="20200303 23:22:04.474" endtime="20200303 23:22:04.705"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div[1]/div[2]/form/details[2]/summary/strong</arg>
+</arguments>
+<msg timestamp="20200303 23:22:04.706" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[1]/div[2]/form/details[2]/summary/strong'.</msg>
+<status status="PASS" starttime="20200303 23:22:04.705" endtime="20200303 23:22:04.946"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>birthdaytime</arg>
+<arg>29022020</arg>
+</arguments>
+<msg timestamp="20200303 23:22:04.946" level="INFO">Typing text '29022020' into text field 'birthdaytime'.</msg>
+<status status="PASS" starttime="20200303 23:22:04.946" endtime="20200303 23:22:05.319"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div[1]/div[2]/form/details[2]/div/div[2]/select[1]/option[1]</arg>
+</arguments>
+<msg timestamp="20200303 23:22:05.319" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[1]/div[2]/form/details[2]/div/div[2]/select[1]/option[1]'.</msg>
+<status status="PASS" starttime="20200303 23:22:05.319" endtime="20200303 23:22:05.546"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div[1]/div[2]/form/details[2]/div/div[2]/select[2]/option[1]</arg>
+</arguments>
+<msg timestamp="20200303 23:22:05.547" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[1]/div[2]/form/details[2]/div/div[2]/select[2]/option[1]'.</msg>
+<status status="PASS" starttime="20200303 23:22:05.546" endtime="20200303 23:22:05.780"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div[1]/div[2]/form/details[2]/div/div[2]/select[3]/option[1]</arg>
+</arguments>
+<msg timestamp="20200303 23:22:05.781" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[1]/div[2]/form/details[2]/div/div[2]/select[3]/option[1]'.</msg>
+<status status="PASS" starttime="20200303 23:22:05.780" endtime="20200303 23:22:06.009"></status>
+</kw>
+<kw name="Submit Form" library="SeleniumLibrary">
+<doc>Submits a form identified by ``locator``.</doc>
+<msg timestamp="20200303 23:22:06.010" level="INFO">Submitting form 'None'.</msg>
+<status status="PASS" starttime="20200303 23:22:06.010" endtime="20200303 23:22:06.510"></status>
+</kw>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<doc>Handles the current alert and returns its message.</doc>
+<arguments>
+<arg>accept</arg>
+</arguments>
+<status status="PASS" starttime="20200303 23:22:06.510" endtime="20200303 23:22:06.817"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200303 23:22:06.818" endtime="20200303 23:22:08.991"></status>
+</kw>
+<status status="PASS" starttime="20200303 23:21:46.191" endtime="20200303 23:22:08.991" critical="yes"></status>
+</test>
+<test id="s1-t10" name="TC04(TestScenario3)(Invalid)">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200303 23:22:08.991" level="INFO">Opening browser 'chrome' to base url 'http://10.199.66.227/SoftEn2020/Sec02/Smurf/template/Maintain.php'.</msg>
+<status status="PASS" starttime="20200303 23:22:08.991" endtime="20200303 23:22:24.107"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20200303 23:22:24.108" endtime="20200303 23:22:24.108"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<msg timestamp="20200303 23:22:24.214" level="INFO">Current location is 'http://10.199.66.227/SoftEn2020/Sec02/Smurf/template/Maintain.php'.</msg>
+<status status="PASS" starttime="20200303 23:22:24.108" endtime="20200303 23:22:24.214"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>add</arg>
+</arguments>
+<msg timestamp="20200303 23:22:24.215" level="INFO">Clicking button 'add'.</msg>
+<status status="PASS" starttime="20200303 23:22:24.215" endtime="20200303 23:22:24.936"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div[1]/div[2]/form/details[1]/summary/strong</arg>
+</arguments>
+<msg timestamp="20200303 23:22:24.936" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[1]/div[2]/form/details[1]/summary/strong'.</msg>
+<status status="PASS" starttime="20200303 23:22:24.936" endtime="20200303 23:22:25.198"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>ItemID</arg>
+<arg>5602070000053</arg>
+</arguments>
+<msg timestamp="20200303 23:22:25.199" level="INFO">Typing text '5602070000053' into text field 'ItemID'.</msg>
+<status status="PASS" starttime="20200303 23:22:25.198" endtime="20200303 23:22:25.628"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>ItemName</arg>
+<arg>Iphone7</arg>
+</arguments>
+<msg timestamp="20200303 23:22:25.629" level="INFO">Typing text 'Iphone7' into text field 'ItemName'.</msg>
+<status status="PASS" starttime="20200303 23:22:25.629" endtime="20200303 23:22:26.005"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>Detail</arg>
+<arg>Ram 1 GB CPUcorei3 270GHz</arg>
+</arguments>
+<msg timestamp="20200303 23:22:26.006" level="INFO">Typing text 'Ram 1 GB CPUcorei3 270GHz' into text field 'Detail'.</msg>
+<status status="PASS" starttime="20200303 23:22:26.005" endtime="20200303 23:22:26.420"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>Price</arg>
+<arg>21000</arg>
+</arguments>
+<msg timestamp="20200303 23:22:26.420" level="INFO">Typing text '21000' into text field 'Price'.</msg>
+<status status="PASS" starttime="20200303 23:22:26.420" endtime="20200303 23:22:26.790"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>Building</arg>
+<arg>6021</arg>
+</arguments>
+<msg timestamp="20200303 23:22:26.791" level="INFO">Typing text '6021' into text field 'Building'.</msg>
+<status status="PASS" starttime="20200303 23:22:26.791" endtime="20200303 23:22:27.158"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div[1]/div[2]/form/details[1]/div/div[2]/div/div[7]/select/option[1]</arg>
+</arguments>
+<msg timestamp="20200303 23:22:27.159" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[1]/div[2]/form/details[1]/div/div[2]/div/div[7]/select/option[1]'.</msg>
+<status status="PASS" starttime="20200303 23:22:27.158" endtime="20200303 23:22:27.388"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div[1]/div[2]/form/details[2]/summary/strong</arg>
+</arguments>
+<msg timestamp="20200303 23:22:27.389" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[1]/div[2]/form/details[2]/summary/strong'.</msg>
+<status status="PASS" starttime="20200303 23:22:27.388" endtime="20200303 23:22:27.629"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>birthdaytime</arg>
+<arg>29022020</arg>
+</arguments>
+<msg timestamp="20200303 23:22:27.629" level="INFO">Typing text '29022020' into text field 'birthdaytime'.</msg>
+<status status="PASS" starttime="20200303 23:22:27.629" endtime="20200303 23:22:28.006"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div[1]/div[2]/form/details[2]/div/div[2]/select[1]/option[1]</arg>
+</arguments>
+<msg timestamp="20200303 23:22:28.007" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[1]/div[2]/form/details[2]/div/div[2]/select[1]/option[1]'.</msg>
+<status status="PASS" starttime="20200303 23:22:28.007" endtime="20200303 23:22:28.237"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div[1]/div[2]/form/details[2]/div/div[2]/select[2]/option[1]</arg>
+</arguments>
+<msg timestamp="20200303 23:22:28.238" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[1]/div[2]/form/details[2]/div/div[2]/select[2]/option[1]'.</msg>
+<status status="PASS" starttime="20200303 23:22:28.237" endtime="20200303 23:22:28.467"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div[1]/div[2]/form/details[2]/div/div[2]/select[3]/option[1]</arg>
+</arguments>
+<msg timestamp="20200303 23:22:28.468" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[1]/div[2]/form/details[2]/div/div[2]/select[3]/option[1]'.</msg>
+<status status="PASS" starttime="20200303 23:22:28.467" endtime="20200303 23:22:28.698"></status>
+</kw>
+<kw name="Submit Form" library="SeleniumLibrary">
+<doc>Submits a form identified by ``locator``.</doc>
+<msg timestamp="20200303 23:22:28.698" level="INFO">Submitting form 'None'.</msg>
+<status status="PASS" starttime="20200303 23:22:28.698" endtime="20200303 23:22:29.207"></status>
+</kw>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<doc>Handles the current alert and returns its message.</doc>
+<arguments>
+<arg>accept</arg>
+</arguments>
+<status status="PASS" starttime="20200303 23:22:29.208" endtime="20200303 23:22:29.515"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200303 23:22:29.515" endtime="20200303 23:22:31.673"></status>
+</kw>
+<status status="PASS" starttime="20200303 23:22:08.991" endtime="20200303 23:22:31.674" critical="yes"></status>
+</test>
+<test id="s1-t11" name="TC01(TestScenario4)(valid)">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200303 23:22:31.676" level="INFO">Opening browser 'chrome' to base url 'http://10.199.66.227/SoftEn2020/Sec02/Smurf/template/Maintain.php'.</msg>
+<status status="PASS" starttime="20200303 23:22:31.676" endtime="20200303 23:23:00.936"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20200303 23:23:00.937" endtime="20200303 23:23:00.937"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<msg timestamp="20200303 23:23:01.043" level="INFO">Current location is 'http://10.199.66.227/SoftEn2020/Sec02/Smurf/template/Maintain.php'.</msg>
+<status status="PASS" starttime="20200303 23:23:00.937" endtime="20200303 23:23:01.043"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div/table/tbody/tr[2]/td[13]/a[1]/button</arg>
+</arguments>
+<msg timestamp="20200303 23:23:01.044" level="INFO">Clicking element 'xpath=/html/body/div[4]/div/table/tbody/tr[2]/td[13]/a[1]/button'.</msg>
+<status status="PASS" starttime="20200303 23:23:01.043" endtime="20200303 23:23:07.641"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div/div[2]/form/details[1]/summary/strong</arg>
+</arguments>
+<msg timestamp="20200303 23:23:07.642" level="INFO">Clicking element 'xpath=/html/body/div[4]/div/div[2]/form/details[1]/summary/strong'.</msg>
+<status status="PASS" starttime="20200303 23:23:07.641" endtime="20200303 23:23:07.891"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div/div[2]/form/details[1]/div/div[2]/div/div[1]/select/option[3]</arg>
+</arguments>
+<msg timestamp="20200303 23:23:07.892" level="INFO">Clicking element 'xpath=/html/body/div[4]/div/div[2]/form/details[1]/div/div[2]/div/div[1]/select/option[3]'.</msg>
+<status status="PASS" starttime="20200303 23:23:07.891" endtime="20200303 23:23:08.123"></status>
+</kw>
+<kw name="Submit Form" library="SeleniumLibrary">
+<doc>Submits a form identified by ``locator``.</doc>
+<msg timestamp="20200303 23:23:08.124" level="INFO">Submitting form 'None'.</msg>
+<status status="PASS" starttime="20200303 23:23:08.123" endtime="20200303 23:23:08.723"></status>
+</kw>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<doc>Handles the current alert and returns its message.</doc>
+<arguments>
+<arg>accept</arg>
+</arguments>
+<status status="PASS" starttime="20200303 23:23:08.723" endtime="20200303 23:23:09.031"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200303 23:23:09.032" endtime="20200303 23:23:11.191"></status>
+</kw>
+<status status="PASS" starttime="20200303 23:22:31.675" endtime="20200303 23:23:11.192" critical="yes"></status>
+</test>
+<test id="s1-t12" name="TC02(TestScenario4)(valid)">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200303 23:23:11.194" level="INFO">Opening browser 'chrome' to base url 'http://10.199.66.227/SoftEn2020/Sec02/Smurf/template/Maintain.php'.</msg>
+<status status="PASS" starttime="20200303 23:23:11.193" endtime="20200303 23:23:41.356"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20200303 23:23:41.356" endtime="20200303 23:23:41.357"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<msg timestamp="20200303 23:23:41.463" level="INFO">Current location is 'http://10.199.66.227/SoftEn2020/Sec02/Smurf/template/Maintain.php'.</msg>
+<status status="PASS" starttime="20200303 23:23:41.357" endtime="20200303 23:23:41.463"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div/table/tbody/tr[2]/td[13]/a[1]/button</arg>
+</arguments>
+<msg timestamp="20200303 23:23:41.464" level="INFO">Clicking element 'xpath=/html/body/div[4]/div/table/tbody/tr[2]/td[13]/a[1]/button'.</msg>
+<status status="PASS" starttime="20200303 23:23:41.463" endtime="20200303 23:23:47.743"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div/div[2]/form/details[1]/summary/strong</arg>
+</arguments>
+<msg timestamp="20200303 23:23:47.743" level="INFO">Clicking element 'xpath=/html/body/div[4]/div/div[2]/form/details[1]/summary/strong'.</msg>
+<status status="PASS" starttime="20200303 23:23:47.743" endtime="20200303 23:23:47.990"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>ItemName</arg>
+<arg>Iphone Edit</arg>
+</arguments>
+<msg timestamp="20200303 23:23:47.990" level="INFO">Typing text 'Iphone Edit' into text field 'ItemName'.</msg>
+<status status="PASS" starttime="20200303 23:23:47.990" endtime="20200303 23:23:48.411"></status>
+</kw>
+<kw name="Submit Form" library="SeleniumLibrary">
+<doc>Submits a form identified by ``locator``.</doc>
+<msg timestamp="20200303 23:23:48.412" level="INFO">Submitting form 'None'.</msg>
+<status status="PASS" starttime="20200303 23:23:48.411" endtime="20200303 23:23:48.958"></status>
+</kw>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<doc>Handles the current alert and returns its message.</doc>
+<arguments>
+<arg>accept</arg>
+</arguments>
+<status status="PASS" starttime="20200303 23:23:48.958" endtime="20200303 23:23:49.267"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200303 23:23:49.268" endtime="20200303 23:23:51.433"></status>
+</kw>
+<status status="PASS" starttime="20200303 23:23:11.193" endtime="20200303 23:23:51.434" critical="yes"></status>
+</test>
+<test id="s1-t13" name="TC03(TestScenario4)(valid)">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200303 23:23:51.436" level="INFO">Opening browser 'chrome' to base url 'http://10.199.66.227/SoftEn2020/Sec02/Smurf/template/Maintain.php'.</msg>
+<status status="PASS" starttime="20200303 23:23:51.435" endtime="20200303 23:25:36.601"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20200303 23:25:36.601" endtime="20200303 23:25:36.601"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<msg timestamp="20200303 23:25:36.708" level="INFO">Current location is 'http://10.199.66.227/SoftEn2020/Sec02/Smurf/template/Maintain.php'.</msg>
+<status status="PASS" starttime="20200303 23:25:36.601" endtime="20200303 23:25:36.708"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div/table/tbody/tr[2]/td[13]/a[1]/button</arg>
+</arguments>
+<msg timestamp="20200303 23:25:36.709" level="INFO">Clicking element 'xpath=/html/body/div[4]/div/table/tbody/tr[2]/td[13]/a[1]/button'.</msg>
+<status status="PASS" starttime="20200303 23:25:36.708" endtime="20200303 23:25:37.778"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div/div[2]/form/details[1]/summary/strong</arg>
+</arguments>
+<msg timestamp="20200303 23:25:37.778" level="INFO">Clicking element 'xpath=/html/body/div[4]/div/div[2]/form/details[1]/summary/strong'.</msg>
+<status status="PASS" starttime="20200303 23:25:37.778" endtime="20200303 23:25:38.023"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>Detail</arg>
+<arg>Ram 2 GB CPUcorei5 570GHz</arg>
+</arguments>
+<msg timestamp="20200303 23:25:38.024" level="INFO">Typing text 'Ram 2 GB CPUcorei5 570GHz' into text field 'Detail'.</msg>
+<status status="PASS" starttime="20200303 23:25:38.023" endtime="20200303 23:25:38.452"></status>
+</kw>
+<kw name="Submit Form" library="SeleniumLibrary">
+<doc>Submits a form identified by ``locator``.</doc>
+<msg timestamp="20200303 23:25:38.453" level="INFO">Submitting form 'None'.</msg>
+<status status="PASS" starttime="20200303 23:25:38.452" endtime="20200303 23:25:39.045"></status>
+</kw>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<doc>Handles the current alert and returns its message.</doc>
+<arguments>
+<arg>accept</arg>
+</arguments>
+<status status="PASS" starttime="20200303 23:25:39.046" endtime="20200303 23:25:39.355"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200303 23:25:39.355" endtime="20200303 23:25:41.516"></status>
+</kw>
+<status status="PASS" starttime="20200303 23:23:51.435" endtime="20200303 23:25:41.517" critical="yes"></status>
+</test>
+<test id="s1-t14" name="TC04(TestScenario4)(valid)">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200303 23:25:41.519" level="INFO">Opening browser 'chrome' to base url 'http://10.199.66.227/SoftEn2020/Sec02/Smurf/template/Maintain.php'.</msg>
+<status status="PASS" starttime="20200303 23:25:41.519" endtime="20200303 23:25:55.495"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20200303 23:25:55.496" endtime="20200303 23:25:55.496"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<msg timestamp="20200303 23:25:55.603" level="INFO">Current location is 'http://10.199.66.227/SoftEn2020/Sec02/Smurf/template/Maintain.php'.</msg>
+<status status="PASS" starttime="20200303 23:25:55.496" endtime="20200303 23:25:55.603"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div/table/tbody/tr[2]/td[13]/a[1]/button</arg>
+</arguments>
+<msg timestamp="20200303 23:25:55.603" level="INFO">Clicking element 'xpath=/html/body/div[4]/div/table/tbody/tr[2]/td[13]/a[1]/button'.</msg>
+<status status="PASS" starttime="20200303 23:25:55.603" endtime="20200303 23:25:56.424"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div/div[2]/form/details[1]/summary/strong</arg>
+</arguments>
+<msg timestamp="20200303 23:25:56.424" level="INFO">Clicking element 'xpath=/html/body/div[4]/div/div[2]/form/details[1]/summary/strong'.</msg>
+<status status="PASS" starttime="20200303 23:25:56.424" endtime="20200303 23:25:56.668"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>Price</arg>
+<arg>18000</arg>
+</arguments>
+<msg timestamp="20200303 23:25:56.668" level="INFO">Typing text '18000' into text field 'Price'.</msg>
+<status status="PASS" starttime="20200303 23:25:56.668" endtime="20200303 23:25:57.052"></status>
+</kw>
+<kw name="Submit Form" library="SeleniumLibrary">
+<doc>Submits a form identified by ``locator``.</doc>
+<msg timestamp="20200303 23:25:57.052" level="INFO">Submitting form 'None'.</msg>
+<status status="PASS" starttime="20200303 23:25:57.052" endtime="20200303 23:25:57.603"></status>
+</kw>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<doc>Handles the current alert and returns its message.</doc>
+<arguments>
+<arg>accept</arg>
+</arguments>
+<status status="PASS" starttime="20200303 23:25:57.603" endtime="20200303 23:25:57.911"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200303 23:25:57.911" endtime="20200303 23:26:00.068"></status>
+</kw>
+<status status="PASS" starttime="20200303 23:25:41.518" endtime="20200303 23:26:00.069" critical="yes"></status>
+</test>
+<test id="s1-t15" name="TC05(TestScenario4)(valid)">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200303 23:26:00.071" level="INFO">Opening browser 'chrome' to base url 'http://10.199.66.227/SoftEn2020/Sec02/Smurf/template/Maintain.php'.</msg>
+<status status="PASS" starttime="20200303 23:26:00.071" endtime="20200303 23:26:19.642"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20200303 23:26:19.642" endtime="20200303 23:26:19.642"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<msg timestamp="20200303 23:26:19.750" level="INFO">Current location is 'http://10.199.66.227/SoftEn2020/Sec02/Smurf/template/Maintain.php'.</msg>
+<status status="PASS" starttime="20200303 23:26:19.643" endtime="20200303 23:26:19.750"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div/table/tbody/tr[2]/td[13]/a[1]/button</arg>
+</arguments>
+<msg timestamp="20200303 23:26:19.750" level="INFO">Clicking element 'xpath=/html/body/div[4]/div/table/tbody/tr[2]/td[13]/a[1]/button'.</msg>
+<status status="PASS" starttime="20200303 23:26:19.750" endtime="20200303 23:26:22.001"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div/div[2]/form/details[1]/summary/strong</arg>
+</arguments>
+<msg timestamp="20200303 23:26:22.002" level="INFO">Clicking element 'xpath=/html/body/div[4]/div/div[2]/form/details[1]/summary/strong'.</msg>
+<status status="PASS" starttime="20200303 23:26:22.001" endtime="20200303 23:26:22.262"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>Building</arg>
+<arg>6204</arg>
+</arguments>
+<msg timestamp="20200303 23:26:22.262" level="INFO">Typing text '6204' into text field 'Building'.</msg>
+<status status="PASS" starttime="20200303 23:26:22.262" endtime="20200303 23:26:22.672"></status>
+</kw>
+<kw name="Submit Form" library="SeleniumLibrary">
+<doc>Submits a form identified by ``locator``.</doc>
+<msg timestamp="20200303 23:26:22.672" level="INFO">Submitting form 'None'.</msg>
+<status status="PASS" starttime="20200303 23:26:22.672" endtime="20200303 23:26:23.235"></status>
+</kw>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<doc>Handles the current alert and returns its message.</doc>
+<arguments>
+<arg>accept</arg>
+</arguments>
+<status status="PASS" starttime="20200303 23:26:23.235" endtime="20200303 23:26:23.543"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200303 23:26:23.543" endtime="20200303 23:26:25.704"></status>
+</kw>
+<status status="PASS" starttime="20200303 23:26:00.070" endtime="20200303 23:26:25.704" critical="yes"></status>
+</test>
+<test id="s1-t16" name="TC06(TestScenario4)(Invalid)">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200303 23:26:25.706" level="INFO">Opening browser 'chrome' to base url 'http://10.199.66.227/SoftEn2020/Sec02/Smurf/template/Maintain.php'.</msg>
+<status status="PASS" starttime="20200303 23:26:25.706" endtime="20200303 23:26:40.549"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20200303 23:26:40.549" endtime="20200303 23:26:40.550"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<msg timestamp="20200303 23:26:40.656" level="INFO">Current location is 'http://10.199.66.227/SoftEn2020/Sec02/Smurf/template/Maintain.php'.</msg>
+<status status="PASS" starttime="20200303 23:26:40.550" endtime="20200303 23:26:40.656"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div/table/tbody/tr[2]/td[13]/a[1]/button</arg>
+</arguments>
+<msg timestamp="20200303 23:26:40.656" level="INFO">Clicking element 'xpath=/html/body/div[4]/div/table/tbody/tr[2]/td[13]/a[1]/button'.</msg>
+<status status="PASS" starttime="20200303 23:26:40.656" endtime="20200303 23:26:42.410"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div/div[2]/form/details[1]/summary/strong</arg>
+</arguments>
+<msg timestamp="20200303 23:26:42.411" level="INFO">Clicking element 'xpath=/html/body/div[4]/div/div[2]/form/details[1]/summary/strong'.</msg>
+<status status="PASS" starttime="20200303 23:26:42.410" endtime="20200303 23:26:42.671"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>ItemName</arg>
+<arg>${Empty}</arg>
+</arguments>
+<msg timestamp="20200303 23:26:42.672" level="INFO">Typing text '' into text field 'ItemName'.</msg>
+<status status="PASS" starttime="20200303 23:26:42.671" endtime="20200303 23:26:43.033"></status>
+</kw>
+<kw name="Submit Form" library="SeleniumLibrary">
+<doc>Submits a form identified by ``locator``.</doc>
+<msg timestamp="20200303 23:26:43.034" level="INFO">Submitting form 'None'.</msg>
+<status status="PASS" starttime="20200303 23:26:43.034" endtime="20200303 23:26:43.466"></status>
+</kw>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<doc>Handles the current alert and returns its message.</doc>
+<arguments>
+<arg>accept</arg>
+</arguments>
+<status status="PASS" starttime="20200303 23:26:43.466" endtime="20200303 23:26:43.774"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200303 23:26:43.775" endtime="20200303 23:26:45.936"></status>
+</kw>
+<status status="PASS" starttime="20200303 23:26:25.705" endtime="20200303 23:26:45.937" critical="yes"></status>
+</test>
+<test id="s1-t17" name="TC01(TestScenario5)(valid)">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200303 23:26:45.939" level="INFO">Opening browser 'chrome' to base url 'http://10.199.66.227/SoftEn2020/Sec02/Smurf/template/Maintain.php'.</msg>
+<status status="PASS" starttime="20200303 23:26:45.939" endtime="20200303 23:26:55.587"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20200303 23:26:55.587" endtime="20200303 23:26:55.588"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<msg timestamp="20200303 23:26:55.695" level="INFO">Current location is 'http://10.199.66.227/SoftEn2020/Sec02/Smurf/template/Maintain.php'.</msg>
+<status status="PASS" starttime="20200303 23:26:55.588" endtime="20200303 23:26:55.695"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[4]/div/table/tbody/tr[2]/td[13]/a[2]/button</arg>
+</arguments>
+<msg timestamp="20200303 23:26:55.695" level="INFO">Clicking element 'xpath=/html/body/div[4]/div/table/tbody/tr[2]/td[13]/a[2]/button'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200303 23:26:57.232" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200303 23:26:56.854" endtime="20200303 23:26:57.232"></status>
+</kw>
+<msg timestamp="20200303 23:26:57.234" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button name="delete" type="submit" class="btn btn-danger mb-2" style="width: 70px"&gt;...&lt;/button&gt; is not clickable at point (967, 635). Other element would receive the click: &lt;div class="container"&gt;...&lt;/div&gt;
+  (Session info: chrome=80.0.3987.122)
+</msg>
+<status status="FAIL" starttime="20200303 23:26:55.695" endtime="20200303 23:26:57.234"></status>
+</kw>
+<status status="FAIL" starttime="20200303 23:26:45.938" endtime="20200303 23:26:57.235" critical="yes">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button name="delete" type="submit" class="btn btn-danger mb-2" style="width: 70px"&gt;...&lt;/button&gt; is not clickable at point (967, 635). Other element would receive the click: &lt;div class="container"&gt;...&lt;/div&gt;
+  (Session info: chrome=80.0.3987.122)
+</status>
+</test>
+<status status="FAIL" starttime="20200303 23:18:41.592" endtime="20200303 23:26:57.238"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="16" fail="1">Critical Tests</stat>
+<stat pass="16" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="16" fail="1" id="s1" name="Testsmurf">Testsmurf</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
