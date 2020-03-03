@@ -16,8 +16,14 @@
         $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	}
 	
-	public function get_item(){
-		$get = $this->pdo->prepare("SELECT item.ID,item.ItemID,item.ItemName,type.TypeName,item.Status,item.Building FROM item , type where item.TypeID = type.ID");
+	// public function get_item(){
+	// 	$get = $this->pdo->prepare("SELECT item.ID,item.ItemID,item.ItemName,type.TypeName,item.Status,item.Building FROM item , type where item.TypeID = type.ID");
+	// 	$get->execute();		
+	// 	return $get->fetchAll();
+		
+	// }
+	public function get_item_edit($ItemID){
+		$get = $this->pdo->prepare("SELECT *  FROM item where ID = $ItemID");
 		$get->execute();		
 		return $get->fetchAll();
 		

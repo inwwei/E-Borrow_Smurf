@@ -1,5 +1,6 @@
 <?php
-$con= mysqli_connect("10.199.66.227","20S2_g4","Dwg7Q6UQ","20s2_g4") or die("Error: " . mysqli_error($con));
+$con= mysqli_connect("localhost","root","","20s2_g4") or die("Error: " . mysqli_error($con));
+//$con= mysqli_connect("10.199.66.227","20S2_g4","Dwg7Q6UQ","20s2_g4") or die("Error: " . mysqli_error($con));
 mysqli_query($con, "SET NAMES 'utf8' ");
 date_default_timezone_set('Asia/Bangkok');
     
@@ -43,8 +44,8 @@ mysqli_close($con);
 	echo "</script>";
 	}else{
     echo "<script type='text/javascript'>";
-    echo "window.location = 'Maintain.php'; ";
-    echo "alert('เพิ่มรายการครุภัณฑ์ ไม่สำเร็จ กรุณาใส่ข้องมูลให้ครบ');";
+    echo "alert('เพิ่มรายการครุภัณฑ์ ไม่สำเร็จ กรุณาใส่ข้อมูลให้ครบ');";
+    echo "window.history.back();";
 	echo "</script>";
 }
 ?>

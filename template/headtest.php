@@ -1,9 +1,3 @@
-<?php 
-    include "controller.php";
-    $action = new Action();
-    session_start();
-?>
-
 <!doctype html>
 <html lang="en">
 
@@ -20,12 +14,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+    <link href="https://fonts.googleapis.com/css?family=Mitr&display=swap" rel="stylesheet">
+
 
 </head>
 
-<body >
+<body>
 
-    <header>
+    <header class="newfont">
         <nav class="navbar navbar-expand-md navbar-dark fixed-top  grad">
             <div class="d-flex flex-column flex-md-row justify-content-between">
                 <a class="py-1" href="#" aria-label="Product">
@@ -55,7 +51,7 @@
                 <!-- profile ค่อยมาแก้เป็นดึงรูปคนสมัครจากดาต้าเบสเอา-->
                 <div class="profile">
                     <a href="#" class="navbar-brand d-flex align-items-center">
-                        <img src="image/msi.jpg" width="55" class="mr-3">
+                        <img src="image/saitama.jpg" width="55" class="mr-3">
                     </a>
                 </div>&nbsp;&nbsp;
 

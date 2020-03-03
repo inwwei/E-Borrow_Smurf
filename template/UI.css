@@ -1,5 +1,6 @@
 .bgbody {
-    background-color: rgb(255, 240, 175);
+    background: linear-gradient(-90deg, rgba(255, 201, 85, 0.459), rgba(254, 255, 235, 0.918), rgba(255, 201, 85, 0.459));
+    /* background: linear-gradient(-90deg, rgba(190, 255, 85, 0.788), rgba(254, 255, 235, 0.918), rgba(190, 255, 85, 0.788)); */
 }
 
 .bgtable {
@@ -31,6 +32,10 @@
 
 .yellow {
     background-color: #ffd11a;
+}
+
+.bgwhite {
+    background-color: #ffffff;
 }
 
 .page-content img {
@@ -74,8 +79,24 @@
 
 .fg {
     background: red;
-    background: -webkit-linear-gradient(-90deg, #ffeb99, yellow);
+    background: -webkit-linear-gradient(-90deg, #ffeb99, rgb(255, 255, 0));
     background: -o-linear-gradient(-90deg, #ffeb99, yellow);
     background: -moz-linear-gradient(-90deg, #ffeb99, yellow);
     background: linear-gradient(-90deg, #ffeb99, yellow);
+}
+
+.linecerv {
+    border-radius: 25px;
+    /* border: 2px solid rgb(191, 255, 15); */
+    border: 2px solid rgb(255, 199, 15);
+}
+
+.hcerv {
+    border-radius: 25px;
+    /* border: 2px solid rgb(191, 255, 15); */
+    border: 2px solid rgb(255, 199, 15);
+}
+
+.newfont {
+    font-family: 'Mitr';
 }
