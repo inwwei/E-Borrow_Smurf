@@ -1,0 +1,81 @@
+.bgbody {
+    background-color: rgb(255, 240, 175);
+}
+
+.bgtable {
+    background-color: white;
+}
+
+.h2 {
+    color: rgb(73, 73, 73);
+}
+
+.btext:link {
+    COLOR: rgb(59, 59, 59);
+    TEXT-DECORATION: none
+}
+
+.btext:visited {
+    COLOR: rgb(59, 59, 59);
+    TEXT-DECORATION: none
+}
+
+.btext:hover {
+    COLOR: rgb(255, 255, 255);
+    TEXT-DECORATION: none
+}
+
+.zen {
+    border: 1px solid white;
+}
+
+.yellow {
+    background-color: #ffd11a;
+}
+
+.page-content img {
+    max-width: 100%;
+    height: auto!important;
+    border-radius: 10px;
+}
+
+.width100 {
+    width: 300px;
+}
+
+.bgm {
+    background-image: url("image/bgm.jpg");
+    z-index: -999;
+    min-height: 100%;
+    min-width: 600px;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+}
+
+.tcenter {
+    text-align: center;
+}
+
+.profile img {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+.grad {
+    background: red;
+    background: -webkit-linear-gradient(-90deg, rgba(255, 102, 0, 0.925), yellow);
+    background: -o-linear-gradient(-90deg, rgba(255, 102, 0, 0.925), yellow);
+    background: -moz-linear-gradient(-90deg, rgba(255, 102, 0, 0.925), yellow);
+    background: linear-gradient(-90deg, rgba(255, 102, 0, 0.925), yellow);
+}
+
+.fg {
+    background: red;
+    background: -webkit-linear-gradient(-90deg, #ffeb99, yellow);
+    background: -o-linear-gradient(-90deg, #ffeb99, yellow);
+    background: -moz-linear-gradient(-90deg, #ffeb99, yellow);
+    background: linear-gradient(-90deg, #ffeb99, yellow);
+}
