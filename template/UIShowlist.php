@@ -113,7 +113,7 @@
         <!--ส่วนตารางเเสดงข้อมูล-->
 
         <table class="table container center tcenter newfont">
-            <tr class="bg-warning">
+            <tr style="background-color: #ff9999">
                 <th scope="col" class="zen" style="width: 10px;">ลำดับ</th>
                 <th scope="col" class="zen" style="width: 150px;">รหัสครุภัณฑ์</th>
                 <th scope="col" class="zen" style="width: 290px;">รายละเอียด</th>

@@ -97,7 +97,7 @@
 
 <div style="display: flex;justify-content: center;">
     <table class="table center tcenter newfont" style="width: 1400px">
-        <tr class="bg-warning">
+        <tr style="background-color: #ff9999">
             <th scope="col" class="zen" style="width: 140px;">รหัสครุภัณฑ์</th>
             <th scope="col" class="zen" style="width: 210px;">ชื่อครุภัณฑ์</th>
             <th scope="col" class="zen" style="width: 140px;">รายละเอียด</th>

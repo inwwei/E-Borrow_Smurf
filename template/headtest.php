@@ -22,7 +22,7 @@
 <body>
 
     <header class="newfont">
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top  grad">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #FF9966">
             <div class="d-flex flex-column flex-md-row justify-content-between">
                 <a class="py-1" href="#" aria-label="Product">
                     <a href="#" class="navbar-brand d-flex align-items-center ">
