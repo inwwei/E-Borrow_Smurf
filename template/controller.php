@@ -2,13 +2,13 @@
 	date_default_timezone_set("Asia/Bangkok");
 	class Action {
     private $pdo;
-	private $servername = "10.199.66.227";
-    private $username = "20S2_g4";
-	private $password = "Dwg7Q6UQ";
+	// private $servername = "10.199.66.227";
+    // private $username = "20S2_g4";
+	// private $password = "Dwg7Q6UQ";
 	
-	//private $servername = "localhost";
-    //private $username = "root";
-	//private $password = "";
+	private $servername = "localhost";
+    private $username = "root";
+	private $password = "";
 	
     
     public function __construct(){
@@ -22,6 +22,11 @@
 		return $get->fetchAll();
 		
 	}
-
+	// public function get_testitem(){
+	// 	$get = $this->pdo->prepare("SELECT * FROM item  type where ID = 1");
+	// 	$get->execute();		
+	// 	return $get->fetchAll();
+		
+	// }
     }
 ?>

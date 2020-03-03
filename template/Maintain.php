@@ -22,7 +22,8 @@
             <div class="col">
                 <div>
                     <h2>&nbsp;รายการอุปกรณ์</h2> 
-                    <button name="add" type="submit" class="btn btn-success mb-2" href="Add.php">เพิ่มครุภัณฑ์</button>
+                    <a href='Add.php' ><button name="add" type="submit" class="btn btn-success mb-2" href="Add.php">เพิ่มครุภัณฑ์</button></a>
+
                 </div>
             </div>
         </div>
@@ -44,7 +45,7 @@
                 <th scope="col" >สิทธิ์นักศึกษา</th>
                 <th scope="col" >วันที่เพิ่ม</th>
                 <th scope="col" >วันที่แก้ไข</th>
-                <th scope="col" >วันที่ลบ</th>
+                <!-- <th scope="col" >วันที่ลบ</th> -->
                 <th scope="col" >การจัดการ</th>
             </tr>
             </thead>
@@ -61,37 +62,15 @@
                     <td scope="row"><?=$row['Status']?></td>
                     <td scope="row"><?=$row['Building']?></td>
                     <td scope="row"><?=$row['Price']?></td>
-                    
-                    <td scope="row"><?
-                        if($row['TeacherRight']==1){ 
-                            echo "อนุญาติ"; 
-                        }
-                        else { 
-                            echo "ไม่อนุญาติ"; 
-                        }
-                    ?></td>
-                    <td scope="row"><?
-                        if($row['StaffRight']==1){ 
-                            echo "อนุญาติ"; 
-                        }
-                        else { 
-                            echo "ไม่อนุญาติ"; 
-                        }
-                    ?></td>
-                    <td scope="row"><?
-                         if($row['StudentRight']==1){ 
-                            echo "อนุญาติ"; 
-                        }
-                        else { 
-                            echo "ไม่อนุญาติ"; 
-                        }
-                    ?></td>
+                    <td scope="row"><?=$row['TeacherRight']?></td>
+                    <td scope="row"><?=$row['StaffRight']?></td>
+                    <td scope="row"><?=$row['StudentRight']?></td>
                     <td scope="row"><?=$row['AddDate']?></td>
-                    <td scope="row"><?=$row['Editdate']?></td>
-                    <td scope="row"><?=$row['EndDate']?></td>
+                    <td scope="row"><?=$row['EditDate']?></td>
+                   
                     <td scope="row">
-                        <button name="edit" type="submit" class="btn btn-warning mb-2">แก้ไข</button>
-                        <button name="delete" type="submit" class="btn btn-danger mb-2">ลบ</button>
+                        <a href='editform.php?ItemID=<?php echo $row['ItemID'] ?> '><button name="edit" type="button" class="btn btn-outline-success">แก้ไข</button></a>
+                        <a href='FuncDelete.php?ItemID=<?php echo $row['ItemID'] ?> 'onclick="return confirm('คุณต้องการลบครุภัณฑ์นี้ใช่หรือไม่!!!')"><button name="delete" type="submit" class="btn btn-danger mb-2">ลบ</button>
                     </td>
                 </tr>
                 <?php  }   ?>
