@@ -55,19 +55,16 @@
                     </a>
                 </div>&nbsp;&nbsp;
 
-                <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" href="#">
-                    sign in
-                </button>&nbsp;&nbsp;
-                <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" href="#">
-                    sign up
-                </button>
+               
+              <a href="logout.php?logout"><button class="btn btn-outline-dark my-2 my-sm-0" type="submit" >     Log out
+                </button></a>
+                    
 
             </div>
         </nav>
 
     </header>
     <div class="position-relative overflow-hidden">
-        <h3>รายการอุปกรณ์</h3>
     </div>
     <br><br>
 

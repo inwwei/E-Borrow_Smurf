@@ -1,5 +1,16 @@
 <!--------------------Header---------------------------->
+<?php 
+session_start();
+
+if(isset($_SESSION['userName'])){
+
+}else{
+  header("location:index.php");
+
+}
+?>
 <?php include "headtest.php" ?>
+
 <div class="container "><br>
 
 
@@ -51,8 +62,9 @@
    $dbName = "20S2_g4";
     $conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
     mysqli_set_charset($conn, "utf8");
-	$sql = "SELECT item.IDs,item.ItemID,item.ItemName,type.TypeName,item.Status,item.Building FROM item , type where item.TypeID = type.ID AND ItemName LIKE '%".$sechKeyword."%'AND Status LIKE '%".$strKeyword."%'AND TypeName LIKE '%".$TypKeyword."%'"   ;
-	$query = mysqli_query($conn,$sql);
+    $sql = "SELECT * FROM item , type , status where item.TypeID = type.ID AND item.Statusref = Status.IDst AND Status.StatusName LIKE '%".$strKeyword."%'AND type.TypeName LIKE '%".$TypKeyword."%'"  ;
+
+    $query = mysqli_query($conn,$sql);
 ?>
 
     <div class="page-content">
@@ -136,7 +148,7 @@
                     <td class="zen tcenter" style="width: 150px;"><?=$row['ItemID']?></td>
                     <td class="zen " style="width: 285px;"><?=$row['ItemName']?></td>
                     <td class="zen tcenter" style="width: 150px;"><?=$row['TypeName']?></td>
-                    <td class="zen tcenter" style="width: 85px;"><?=$row['Status']?></td>
+                    <td class="zen tcenter" style="width: 85px;"><?=$row['StatusName']?></td>
                     <td class="zen tcenter" style="width: 105px;"><?=$row['Building']?></td>
                     <td scope="row" class="zen tcenter" style="width: 100px;"><button name="lent" type="submit"
                             class="btn btn-secondary mb-2">ยืม</button>

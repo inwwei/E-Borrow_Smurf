@@ -1,4 +1,13 @@
 <!--------------------Header---------------------------->
+<?php 
+    session_start();
+      if(isset($_SESSION['userName'])){
+
+    }else{
+        header("location:index.php");
+
+    }
+?>
 <?php include "headtest.php" ?>
 
 
@@ -27,6 +36,8 @@
 ?>
 
     <?php
+        // echo $_SESSION['username']; 
+
 	ini_set('display_errors', 1);
 	error_reporting(~0);
 	date_default_timezone_set("Asia/Bangkok");
@@ -87,7 +98,7 @@
 
 
             <a href='Add.php'><button name="add" type="submit" class="btn btn-success my-4" href="Add.php"
-                    style="width: 120px;float:right">เพิ่มรายการ</button></a>
+                    style="width: 120px;float:right">เพิ่มครุภัณฑ์</button></a>
 
         </div>
         <br>
@@ -119,7 +130,6 @@
     <!--ส่วนตารางเเสดงข้อมูล-->
     <div style=" width:1400px; height: 460px; overflow-y: scroll;">
         <?php
-        
         // $serverName = "10.199.66.227";
         // $userName = "20S2_g4";
         // $userPassword = "Dwg7Q6UQ";
@@ -128,33 +138,35 @@
         $userName = "root";
         $userPassword = "";
 
-        $dbName = "20S2_g4";
+        $dbName = "20s2_g4";
         $conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
         mysqli_set_charset($conn, "utf8");
-        $sql = "SELECT * FROM item , type where item.TypeID = type.ID AND Status LIKE '%".$strKeyword."%'AND TypeName LIKE '%".$TypKeyword."%'"  ;
+        $sql = "SELECT * FROM item , type , status where item.TypeID = type.ID AND item.Statusref = Status.IDst AND Status.StatusName LIKE '%".$strKeyword."%'AND type.TypeName LIKE '%".$TypKeyword."%'"  ;
         $query = mysqli_query($conn,$sql);
      
         ?>
         <table class="table center table-hover">
-
             <tbody>
                 <?php 
 		
-				while($row=mysqli_fetch_array($query,MYSQLI_ASSOC)){ ?>
+                while($row=mysqli_fetch_array($query,MYSQLI_ASSOC)){ ?>
+                
+             
+
                 <tr>
 
                     <td scope="row" class="zen" style="width: 140px;"><?=$row['ItemID']?></td>
                     <td scope="row" class="zen" style="width: 210px;"><?=$row['ItemName']?></td>
                     <td scope="row" class="zen" style="width: 140px;"><?=$row['Detail']?></td>
                     <td scope="row" class="zen" style="width: 120px;"><?=$row['TypeName']?></td>
-                    <td scope="row" class="zen tcenter" style="width: 70px;"><?=$row['Status']?></td>
+                    <td scope="row" class="zen tcenter" style="width: 70px;"><?=$row['StatusName']?></td>
                     <td scope="row" class="zen tcenter" style="width: 80px;"><?=$row['Building']?></td>
                     <td scope="row" class="zen" style="width: 100px;"><?=$row['Price']?></td>
                     <td scope="row" class="zen" style="width: 75px;"><?=$row['TeacherRight']?></td>
                     <td scope="row" class="zen" style="width: 75px;"><?=$row['StaffRight']?></td>
                     <td scope="row" class="zen" style="width: 75px;"><?=$row['StudentRight']?></td>
-                    <td scope="row" class="zen" style="width: 120px;"><?=$row['AddDate']?></td>
-                    <td scope="row" class="zen" style="width: 120px;"><?=$row['EditDate']?></td>
+                    <td scope="row" class="zen" style="width: 120px;"><?=$row['Add_Date']?></td>
+                    <td scope="row" class="zen" style="width: 120px;"><?=$row['Edit_Date']?></td>
 
                     <td scope="row" class="zen" style="width: 100px;">
                         <a href='editform.php?ItemID=<?php echo $row['ItemID'] ?>&&IDs=<?php echo $row['IDs'] ?> '><button

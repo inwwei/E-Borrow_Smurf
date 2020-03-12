@@ -1,4 +1,12 @@
 <!--------------------Header---------------------------->
+<?php 
+session_start();
+    if(isset($_SESSION['username'])){
+
+    }else{
+        header("location:index.php");
+    }
+?>
 <?php include "headtest.php" ?>
 <br>
 <div class="tcenter">

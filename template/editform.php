@@ -1,4 +1,15 @@
+<?php 
+session_start();
+
+if(isset($_SESSION['userName'])){
+
+}else{
+  header("location:index.php");
+
+}
+?>
 <?php include "headtest.php"?>
+<?php include_once("checklogin.php");?> 
 <br>
 
 <div class="tcenter">
@@ -54,12 +65,12 @@ function fncSubmit() {
 	// $serverName = "10.199.66.227";
 	// $userName = "20S2_g4";
 	// $userPassword = "Dwg7Q6UQ";
-	// $dbName = "20S2_g4";
+	// $dbName = "20s2_g4";
 
 	$serverName = "localhost";
 	$userName = "root";
 	$userPassword = "";
-	$dbName = "20S2_g4";
+	$dbName = "20s2_g4";
 
 
 
