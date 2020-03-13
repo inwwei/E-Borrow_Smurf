@@ -1,13 +1,11 @@
 <!--------------------Header---------------------------->
 <?php 
 session_start();
+    if(isset($_SESSION['userName'])){
 
-if(isset($_SESSION['userName'])){
-
-}else{
-  header("location:index.php");
-
-}
+    }else{
+        header("location:index.php");
+    }
 ?>
 <?php include "headtest.php" ?>
 
@@ -66,7 +64,7 @@ if(isset($_SESSION['userName'])){
 
     $query = mysqli_query($conn,$sql);
 ?>
-
+    
     <div class="page-content">
         <img src="image/Untitled-2.jpg" />
     </div><br>
@@ -150,8 +148,8 @@ if(isset($_SESSION['userName'])){
                     <td class="zen tcenter" style="width: 150px;"><?=$row['TypeName']?></td>
                     <td class="zen tcenter" style="width: 85px;"><?=$row['StatusName']?></td>
                     <td class="zen tcenter" style="width: 105px;"><?=$row['Building']?></td>
-                    <td scope="row" class="zen tcenter" style="width: 100px;"><button name="lent" type="submit"
-                            class="btn btn-secondary mb-2">ยืม</button>
+                    <td scope="row" class="zen tcenter" style="width: 100px;"><a a href='borrowform.php?ItemID=<?php echo $row['ItemID'] ?>&&IDs=<?php echo $row['IDs'] ?>&&userID=<?php echo $_SESSION['userName'] ?>&&status=<?php echo $row['IDst'] ?> '><button name="lent" type="submit"
+                            class="btn btn-secondary mb-2">ยืม</button></a>
                 </tr>
 
                 <?php
