@@ -11,9 +11,10 @@
     $reason = $_POST["reason"];
     $Start_Date = $_POST["Start_Date"];
     $End_Date = $_POST["End_Date"];
+
     
-	$sqlin = "INSERT INTO borrowtransection (ItemID, userID, reason, Start_Date, End_Date, statusref )
-    VALUES ('$ItemID', '$userID', '$reason', '$Start_Date', '$End_Date', '$statusref')";
+	$sqlin = "INSERT INTO borrowtransection (ItemID, userID, reason, Start_Date, End_Date, statusref, statuswork )
+    VALUES ('$ItemID', '$userID', '$reason', '$Start_Date', '$End_Date', '$statusref', 'รอดำเนินการ')";
     
 	$result = mysqli_query($con, $sqlin);
 

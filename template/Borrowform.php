@@ -178,13 +178,13 @@ session_start();
 
                                 <div class="col-6">
                                     <label for="AddDate">วันที่ยืม</label>
-                                    <input type="text" name="date" id="date" value="<?=date('m/d/Y h:i A')?>" class="form-control mb-2 mr-sm-2" readonly>
+                                    <input type="text" name="date" id="date" value="<?=date('m/d/Y')?>" class="form-control mb-2 mr-sm-2" readonly>
 
                                 </div>
 
                                 <div class="col-6">
                                     <label for="AddDate">วันที่คืน</label>
-                                    <input type="datetime-local" id="birthdaytime" name="End_Date"
+                                    <input type="date" id="birthdaytime" name="End_Date"
                                         class="form-control mb-2 mr-sm-2" required>
 
                                 </div>
@@ -200,7 +200,7 @@ session_start();
         <div class="row newfont">
             <div class="col-4"></div>
             <div class="col-4 tcenter">
-                <a href='Maintain.php'><button type="button" name="back" class="btn btn-secondary"
+                <a href='UIshowlist.php'><button type="button" name="back" class="btn btn-secondary"
                         style="width: 100px">ย้อนกลับ</button></a>
                 <input type="submit" class="btn btn-success" name="btnsuccess" style="width: 100px" value="ยืนยัน">
                 <div class="col-4"></div>
