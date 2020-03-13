@@ -9,7 +9,6 @@ if(isset($_SESSION['userName'])){
 }
 ?>
 <?php include "headtest.php"?>
-<?php include_once("checklogin.php");?> 
 <br>
 
 <div class="tcenter">
@@ -211,11 +210,11 @@ function fncSubmit() {
                                     <!-- <select class="form-control mb-2 mr-sm-2" id="Status" name="Status"> -->
                                     <?php
 										$ItemID = $_GET['ItemID'];
-										$res2 = mysqli_query($conn, "SELECT Status,StaffRight,TeacherRight,StudentRight FROM  item WHERE ItemID =  $ItemID");
+										$res2 = mysqli_query($conn, "SELECT * FROM  item WHERE ItemID =  $ItemID");
 
 										while ($row2 = mysqli_fetch_array($res2)) {?>
                                     <input type="text" readonly class="form-control mb-2 mr-sm-2"
-                                        value="<?php echo $row2['Status']; ?>" id="Status" name="Status">
+                                        value="<?php echo $row2['Statusref']; ?>" id="Status" name="Status">
 
                                     <?php }?>
 
@@ -246,7 +245,7 @@ function fncSubmit() {
                             <label for="email2">สิทธิ์ให้ยืมในฐานะอาจารย์</label>
                             <?php
 									$ItemID = $_GET['ItemID'];
-									$res2 = mysqli_query($conn, "SELECT Status,StaffRight,TeacherRight,StudentRight FROM  item WHERE ItemID =  $ItemID");
+									$res2 = mysqli_query($conn, "SELECT Statusref,StaffRight,TeacherRight,StudentRight FROM  item WHERE ItemID =  $ItemID");
 									while ($row2 = mysqli_fetch_array($res2)) {?>
                             <input type="text" readonly class="form-control mb-2 mr-sm-2"
                                 value="<?php echo $row2['TeacherRight']; ?>" id="TeacherRight" name="TeacherRight">
@@ -255,7 +254,7 @@ function fncSubmit() {
                             <label for="email2">สิทธิ์ให้ยืมในฐานะบุคคลากร</label>
                             <?php
 									$ItemID = $_GET['ItemID'];
-									$res2 = mysqli_query($conn, "SELECT Status,StaffRight,TeacherRight,StudentRight FROM  item WHERE ItemID =  $ItemID");
+									$res2 = mysqli_query($conn, "SELECT Statusref,StaffRight,TeacherRight,StudentRight FROM  item WHERE ItemID =  $ItemID");
 									while ($row2 = mysqli_fetch_array($res2)) {?>
                             <input type="text" readonly class="form-control mb-2 mr-sm-2"
                                 value="<?php echo $row2['StaffRight']; ?>" id="StaffRight" name="StaffRight">
@@ -264,7 +263,7 @@ function fncSubmit() {
                             <label for="email2">สิทธิ์ให้ยืมในฐานะนักศึกษา</label>
                             <?php
 									$ItemID = $_GET['ItemID'];
-									$res2 = mysqli_query($conn, "SELECT Status,StaffRight,TeacherRight,StudentRight FROM  item WHERE ItemID =  $ItemID");
+									$res2 = mysqli_query($conn, "SELECT Statusref,StaffRight,TeacherRight,StudentRight FROM  item WHERE ItemID =  $ItemID");
 									while ($row2 = mysqli_fetch_array($res2)) {?>
                             <input type="text" readonly class="form-control mb-2 mr-sm-2"
                                 value="<?php echo $row2['StudentRight']; ?>" id="StudentRight" name="StudentRight">
