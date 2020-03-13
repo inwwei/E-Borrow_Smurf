@@ -1,10 +1,11 @@
 <!--------------------Header---------------------------->
 <?php 
-session_start();
-    if(isset($_SESSION['username'])){
+    session_start();
+      if(isset($_SESSION['userName'])){
 
     }else{
         header("location:index.php");
+
     }
 ?>
 <?php include "headtest.php" ?>
