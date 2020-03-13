@@ -1,6 +1,6 @@
 <?php
-$con= mysqli_connect("localhost","root","","20s2_g4") or die("Error: " . mysqli_error($con));
-//$con= mysqli_connect("10.199.66.227","20S2_g4","Dwg7Q6UQ","20s2_g4") or die("Error: " . mysqli_error($con));
+
+$con= mysqli_connect("10.199.66.227","20S2_g4","Dwg7Q6UQ","20s2_g4") or die("Error: " . mysqli_error($con));
 mysqli_query($con, "SET NAMES 'utf8' ");
 date_default_timezone_set('Asia/Bangkok');
     
@@ -13,8 +13,8 @@ date_default_timezone_set('Asia/Bangkok');
     $TeacherRight = $_POST["TeacherRight"];
     $StaffRight = $_POST["StaffRight"];
     $StudentRight = $_POST["StudentRight"];
-    $Status = $_POST["Status"];
-    $AddDate = $_POST["AddDate"];
+    $Status = $_POST["Statusref"];
+    $AddDate = $_POST["Add_Date"];
     
 
 	$check = "
@@ -32,7 +32,7 @@ date_default_timezone_set('Asia/Bangkok');
     echo "window.history.back();";
     echo "</script>";
     }else{        
-	$sql = "INSERT INTO item (TypeID, ItemID, ItemName, Detail, Price, Building, TeacherRight, StaffRight, StudentRight, Status, AddDate)
+	$sql = "INSERT INTO item (TypeID, ItemID, ItemName, Detail, Price, Building, TeacherRight, StaffRight, StudentRight, Statusref, Add_Date)
     VALUES ('$TypeID', '$ItemID', '$ItemName', '$Detail', '$Price', '$Building', '$TeacherRight', '$StaffRight', '$StudentRight', '$Status', '$AddDate')";
 	$result = mysqli_query($con, $sql); //or die("Error in query: $sql " . mysqli_error());
 }

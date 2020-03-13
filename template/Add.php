@@ -1,13 +1,6 @@
 <!--------------------Header---------------------------->
-<?php 
-session_start();
-    if(isset($_SESSION['username'])){
-
-    }else{
-        header("location:index.php");
-    }
-?>
 <?php include "headtest.php" ?>
+<?php include_once("checklogin.php");?> 
 <br>
 <div class="tcenter">
     <img src="logo/logo_add.png" width="200px" />
@@ -137,11 +130,11 @@ session_start();
 
                                 <div class="col-6">
                                     <label for="email2">สถานะ</label>
-                                    <select class="custom-select d-block " id="Status" name="Status">
-                                        <option value="ปกติ">ปกติ</option>
-                                        <option value="ไม่ว่าง">ไม่ว่าง</option>
-                                        <option value="ซ่อมบำรุง">ซ่อมบำรุง</option>
-                                        <option value="ปลดระวาง">ปลดระวาง</option>
+                                    <select class="custom-select d-block " id="Statusref" name="Statusref">
+                                        <option value="1">ปกติ</option>
+                                        <option value="2">จำหน่ายออก</option>
+                                        <option value="3">ถูกยืม</option>
+                                        <option value="4">ปลดระวาง</option>
                                     </select>
                                 </div>
 
@@ -188,7 +181,7 @@ session_start();
                             </select><br> -->
 
                             <label for="AddDate">วันเวลาที่เพิ่ม (date and time):</label>
-                            <input type="datetime-local" id="birthdaytime" name="AddDate"
+                            <input type="date" id="birthdaytime" name="Add_Date"
                                 class="form-control mb-2 mr-sm-2">
 
                         </div>
