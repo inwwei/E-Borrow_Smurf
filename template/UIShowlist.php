@@ -48,26 +48,29 @@
 	{
 		$TypKeyword = $_POST["TypeKeyword"];
 	}
+
+    
 ?>
     <?php
-   $serverName = "localhost";
-   $userName = "root";
-   $userPassword = "";
+    $serverName = "10.199.66.227";
+	$userName = "20S2_g4";
+	$userPassword = "Dwg7Q6UQ";
+	
 
-//    $serverName = "10.199.66.227";
-//    $userName = "20S2_g4";
-//    $userPassword = "Dwg7Q6UQ";
-   $dbName = "20S2_g4";
+        $dbName = "20S2_g4";
 
    $conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
     mysqli_set_charset($conn, "utf8");
     $sql = "SELECT * FROM item , type , status 
     where item.TypeID = type.ID 
     AND item.Statusref = Status.IDst 
-    AND Status.StatusName LIKE '%".$strKeyword."%'
-    AND type.TypeName LIKE '%".$TypKeyword."%'"  ;
+    
+    AND Status.IDst LIKE '%".$strKeyword."%'
+    AND type.ID LIKE '%".$TypKeyword."%'"  ;
 
-	$query = mysqli_query($conn,$sql);
+
+    $query = mysqli_query($conn,$sql);
+    
 ?>
 
     <div class="page-content">
@@ -87,7 +90,6 @@
                 <form class="form-inline" name="frmSearch" method="post" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
                     <h6>ประเภทครุภัณฑ์ :</h6>&nbsp;&nbsp;
                     <select class="custom-select d-block " id="TypeKeyword" name="TypeKeyword">
-
                         <option value="">ประเภทครุภัณฑ์</option>
                         <?php
                         
@@ -104,10 +106,14 @@
                     <h6>สถานะครุภัณฑ์ :</h6>&nbsp;&nbsp;
                     <select class="custom-select d-block " id="txtKeyword" name="txtKeyword">
                         <option value="">รายการทั้งหมด</option>
-                        <option value="ปกติ">ปกติ</option>
-                        <option value="จำหน่ายออก">จำหน่ายออก</option>
-                        <option value="ถูกยืม">ถูกยืม</option>
-                        <option value="ปลดระวาง">ปลดระวาง</option>
+                        <?php
+                        $statusSQL = "SELECT * FROM status ";
+                        $result = mysqli_query($conn, $statusSQL);
+                        while($stsResuut= mysqli_fetch_array($result)) 
+                        {
+                            echo "<option value='" .$stsResuut['IDst'] . "'>" .$stsResuut['StatusName'] . "</option>";
+                        }
+                        ?>
                     </select>&nbsp;&nbsp;
                     <!--ส่วนค้นหารายการ
                     <input class="form-control " name="secKeyword" type="text" id="secKeyword"
@@ -138,18 +144,34 @@
 
                 <?php 
                 $number=1;
-				$temp=0;
+                $temp=0;
+                
 				while($row=mysqli_fetch_array($query,MYSQLI_ASSOC)){ ?>
                 <tr>
-                    <td class="zen tcenter" style="width: 65px;"><?=$row['IDs']?></td>
+                    <td class="zen tcenter" style="width: 65px;"><?php echo $number; ?></td>
                     <td class="zen tcenter" style="width: 150px;"><?=$row['ItemID']?></td>
                     <td class="zen " style="width: 285px;"><?=$row['ItemName']?></td>
                     <td class="zen tcenter" style="width: 150px;"><?=$row['TypeName']?></td>
                     <td class="zen tcenter" style="width: 85px;"><?=$row['StatusName']?></td>
                     <td class="zen tcenter" style="width: 105px;"><?=$row['Building']?></td>
-                    <td scope="row" class="zen tcenter" style="width: 100px;"><a a
-                            href='Borrowform.php?ItemID=<?php echo $row['ItemID'] ?>&&IDs=<?php echo $row['IDs'] ?>&&status=<?php echo $row['IDst'] ?> '><button
-                                name="lent" type="submit" class="btn btn-secondary mb-2">ยืม</button></a></td>
+                    <td scope="row" class="zen tcenter" style="width: 100px;">
+
+                        <?php if ($row['Statusref'] == "1") { ?>
+                            <a
+                                href='Borrowform.php?ItemID=<?php echo $row['ItemID'] ?>&&IDs=<?php echo $row['IDs'] ?>&&status=<?php echo $row['IDst'] ?> '><button
+                                name="lent" type="submit" class="btn btn-secondary mb-2">ยืม</button>
+                            </a>
+                        
+                        <?php } elseif ($row['Statusref'] == "3") { ?>
+                            
+                            <a><button
+                                name="lent" type="submit" class="btn btn-secondary mb-2">ถูกยืม</button>
+                            </a>
+                       
+                        <?php } ?>
+
+
+                    </td>
 
                 </tr>
 
