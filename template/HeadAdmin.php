@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -30,7 +31,7 @@
                     </a>
                 </a>
             </div>
-            <h2 style="font-size:30px" class="h2 btext"><a class="btext" href="UIshowlist.php">หน้าหลัก</a></h2>&nbsp;&nbsp;&nbsp;&nbsp;
+            <h2 style="font-size:30px" class="h2 btext"><a class="btext" href="Maintain.php">หน้าหลัก</a></h2>&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -38,15 +39,26 @@
 
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
-
+                    
                     <li class="nav-item">
-                        <a class="btext" href="HistoryStudent.php">ประวัติการยืม</a>
+                        <a class="btext" href="#">ยืมครุภัณฑ์</a>
+                    </li>&nbsp;&nbsp;
+                    <li class="nav-item">
+                        <a class="btext" href="Add.php">เพิ่มรายการครุภัณฑ์</a>
+                    </li>&nbsp;&nbsp;
+                    <li class="nav-item">
+                        <a class="btext" href="TypeItem.php">เพิ่มประเภทครุภัณฑ์</a>
+                    </li>&nbsp;&nbsp;
+                    <li class="nav-item">
+                        <a class="btext" href="Request.php">รายการคำร้องขอ</a>
+                    </li>&nbsp;&nbsp;
+                    <li class="nav-item">
+                        <a class="btext" href="ShowApprove.php">รายการที่อนุมัติแล้ว</a>
                     </li>&nbsp;&nbsp;
                     
                     <br>
                 </ul>
-
-
+                <!-- profile ค่อยมาแก้เป็นดึงรูปคนสมัครจากดาต้าเบสเอา-->
                 <?php
                 
                 $serverName = "localhost";
@@ -58,7 +70,6 @@
                 // $userPassword = "Dwg7Q6UQ";
 
                 $dbName = "20s2_g4";
-
 
                 $conn = mysqli_connect($serverName, $userName, $userPassword, $dbName);
                 mysqli_set_charset($conn, "utf8");
@@ -73,9 +84,10 @@
                 <!-- profile -->
                 <div class="btext">
                         <h6><?php
-                        echo " " . $usID['firstName'] . " " . $usID['lastName'] ;
+                        echo " " . $usID['userName'] . " " . $usID['firstName'] ;
                         ?></h6>
                 </div>&nbsp;&nbsp;&nbsp;&nbsp;
+
 
                 <a href="logout.php?logout"><button class="btn btn-outline-dark my-2 my-sm-0" type="submit" >     Log out
                 </button></a>
@@ -89,7 +101,7 @@
         <h3>รายการอุปกรณ์</h3>
     </div>
     <br><br>
-
+    <?php date_default_timezone_set("Asia/Bangkok"); ?>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>

@@ -1,14 +1,14 @@
 <!--------------------Header---------------------------->
 <?php 
-session_start();
-    if(isset($_SESSION['userName'])){
+    session_start();
+      if(isset($_SESSION['userName'])){
 
     }else{
         header("location:index.php");
+
     }
 ?>
 <?php include "headtest.php" ?>
-
 <div class="container "><br>
 
 
@@ -58,13 +58,18 @@ session_start();
 //    $userName = "20S2_g4";
 //    $userPassword = "Dwg7Q6UQ";
    $dbName = "20S2_g4";
-    $conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
-    mysqli_set_charset($conn, "utf8");
-    $sql = "SELECT * FROM item , type , status where item.TypeID = type.ID AND item.Statusref = Status.IDst AND Status.StatusName LIKE '%".$strKeyword."%'AND type.TypeName LIKE '%".$TypKeyword."%'"  ;
 
-    $query = mysqli_query($conn,$sql);
+   $conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
+    mysqli_set_charset($conn, "utf8");
+    $sql = "SELECT * FROM item , type , status 
+    where item.TypeID = type.ID 
+    AND item.Statusref = Status.IDst 
+    AND Status.StatusName LIKE '%".$strKeyword."%'
+    AND type.TypeName LIKE '%".$TypKeyword."%'"  ;
+
+	$query = mysqli_query($conn,$sql);
 ?>
-    
+
     <div class="page-content">
         <img src="image/Untitled-2.jpg" />
     </div><br>
@@ -82,33 +87,26 @@ session_start();
                 <form class="form-inline" name="frmSearch" method="post" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
                     <h6>ประเภทครุภัณฑ์ :</h6>&nbsp;&nbsp;
                     <select class="custom-select d-block " id="TypeKeyword" name="TypeKeyword">
+
                         <option value="">ประเภทครุภัณฑ์</option>
-                        <option value="อาคารถาวร">อาคารถาวร</option>
-                        <option value="อาคารชั่วคราว/โรงเรียน">อาคารชั่วคราว/โรงเรียน</option>
-                        <option value="สิ่งก่อสร้าง">สิ่งก่อสร้าง</option>
-                        <option value="ครุภัณฑ์โรงงาน">ครุภัณฑ์โรงงาน</option>
-                        <option value="ครุภัณฑ์ยานพาหนะและขนส่ง">ครุภัณฑ์ยานพาหนะและขนส่ง</option>
-                        <option value="ครุภัณฑ์ไฟฟ้าและวิทยุ">ครุภัณฑ์ไฟฟ้าและวิทยุ</option>
-                        <option value="ครุภัณฑ์โฆษณาและเผยแพร่">ครุภัณฑ์โฆษณาและเผยแพร่</option>
-                        <option value="ครุภัณฑ์การเกษตร">ครุภัณฑ์การเกษตร</option>
-                        <option value="ครุภัณฑ์โรงงาน">ครุภัณฑ์โรงงาน</option>
-                        <option value="ครุภัณฑ์ก่อสร้าง">ครุภัณฑ์ก่อสร้าง</option>
-                        <option value="ครุภัณฑ์สำรวจ">ครุภัณฑ์สำรวจ</option>
-                        <option value="ครุภัณฑ์วิทยาศาตร์การแพทย์">ครุภัณฑ์วิทยาศาตร์การแพทย์</option>
-                        <option value="ครุภัณฑ์คอมพิวเตอร์">ครุภัณฑ์คอมพิวเตอร์</option>
-                        <option value="ครุภัณฑ์การศึกษา">ครุภัณฑ์การศึกษา</option>
-                        <option value="ครุภัณฑ์งานบ้านงานครัว">ครุภัณฑ์งานบ้านงานครัว</option>
-                        <option value="ครุภัณฑ์กีฬา">ครุภัณฑ์กีฬา</option>
-                        <option value="ครุภัณฑ์ดนตรีและนาฏศิลป์">ครุภัณฑ์ดนตรีและนาฏศิลป์</option>
-                        <option value="ครุภัณฑ์อาวุธ">ครุภัณฑ์อาวุธ</option>
-                        <option value="ครุภัณฑ์สนาม">ครุภัณฑ์สนาม</option>
+                        <?php
+                        
+                        $strSQL = "SELECT * FROM type ";
+                        $result = mysqli_query($conn, $strSQL);
+                        while($objResuut= mysqli_fetch_array($result)) 
+                        {
+                            echo "<option value='" .$objResuut['ID'] . "'>" .$objResuut['TypeName'] . "</option>";
+                        }
+                        ?>
+
+
                     </select>&nbsp;&nbsp;
                     <h6>สถานะครุภัณฑ์ :</h6>&nbsp;&nbsp;
                     <select class="custom-select d-block " id="txtKeyword" name="txtKeyword">
                         <option value="">รายการทั้งหมด</option>
                         <option value="ปกติ">ปกติ</option>
-                        <option value="ไม่ว่าง">ไม่ว่าง</option>
-                        <option value="ซ่อมบำรุง">ซ่อมบำรุง</option>
+                        <option value="จำหน่ายออก">จำหน่ายออก</option>
+                        <option value="ถูกยืม">ถูกยืม</option>
                         <option value="ปลดระวาง">ปลดระวาง</option>
                     </select>&nbsp;&nbsp;
                     <!--ส่วนค้นหารายการ
@@ -139,6 +137,7 @@ session_start();
             <table class="table container center table-hover">
 
                 <?php 
+                $number=1;
 				$temp=0;
 				while($row=mysqli_fetch_array($query,MYSQLI_ASSOC)){ ?>
                 <tr>
@@ -148,12 +147,15 @@ session_start();
                     <td class="zen tcenter" style="width: 150px;"><?=$row['TypeName']?></td>
                     <td class="zen tcenter" style="width: 85px;"><?=$row['StatusName']?></td>
                     <td class="zen tcenter" style="width: 105px;"><?=$row['Building']?></td>
-                    <td scope="row" class="zen tcenter" style="width: 100px;"><a a href='borrowform.php?ItemID=<?php echo $row['ItemID'] ?>&&IDs=<?php echo $row['IDs'] ?>&&userID=<?php echo $_SESSION['userName'] ?>&&status=<?php echo $row['IDst'] ?> '><button name="lent" type="submit"
-                            class="btn btn-secondary mb-2">ยืม</button></a>
+                    <td scope="row" class="zen tcenter" style="width: 100px;"><a a
+                            href='Borrowform.php?ItemID=<?php echo $row['ItemID'] ?>&&IDs=<?php echo $row['IDs'] ?>&&status=<?php echo $row['IDst'] ?> '><button
+                                name="lent" type="submit" class="btn btn-secondary mb-2">ยืม</button></a></td>
+
                 </tr>
 
                 <?php
-				$temp++;
+                $temp++;
+                $number++;
 				}?>
                 <?php if ($temp == 0){
 					echo  "<p> <font color=red font face='verdana' size='5pt'>ไม่มีรายการอุปกรณ์ที่ค้นหา</font> </p>";

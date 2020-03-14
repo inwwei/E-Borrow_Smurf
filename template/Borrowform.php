@@ -45,11 +45,6 @@ session_start();
     $row = mysqli_fetch_array($res);
 
 
-    $userID = $_GET['userID'];
-    $sqlus = "SELECT * FROM useraccount WHERE userName = '$userID'";
-    $us = mysqli_query($conn, $sqlus);
-    $usID = mysqli_fetch_array($us);
-
     $ref = $_GET['status'];
     $sqlst = "SELECT * FROM status WHERE IDst = '$ref'";
     $st = mysqli_query($conn, $sqlst);
@@ -178,7 +173,7 @@ session_start();
 
                                 <div class="col-6">
                                     <label for="AddDate">วันที่ยืม</label>
-                                    <input type="text" name="date" id="date" value="<?=date('m/d/Y')?>" class="form-control mb-2 mr-sm-2" readonly>
+                                    <input type="text" name="date" id="date" value="<?=date('m/d/Y เวลา h:i:s A')?>" class="form-control mb-2 mr-sm-2" readonly>
 
                                 </div>
 

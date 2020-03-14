@@ -1,16 +1,17 @@
 <!--------------------Header---------------------------->
 <?php 
 session_start();
-    if(isset($_SESSION['username'])){
+    if(isset($_SESSION['userName'])){
 
     }else{
         header("location:index.php");
     }
 ?>
-<?php include "headtest.php" ?>
+<?php include "HeadAdmin.php" ?>
+
 <br>
 <div class="tcenter">
-    <img src="logo/logo_add.png" width="200px" />
+    <img src="logo/logo_add.png" width="180px" />
 </div>
 <div>
     <h2 class="tcenter newfont">เพิ่มรายการครุภัณฑ์</h2>
@@ -27,9 +28,9 @@ session_start();
                 <div class="row">
                     <div class="col-4"></div>
                     <div class="col-5">
-                        
+
                         <b>ประเภทครุภัณฑ์ </b>
-                        <li>กรอกข้อมูลโดยเลือกจากรายการ เช่น  ครุภัณฑ์โรงงาน</li>
+                        <li>กรอกข้อมูลโดยเลือกจากรายการ เช่น ครุภัณฑ์โรงงาน</li>
 
                         <b>รหัสครุภัณฑ์ ตัวอย่าง 56020700053</b>
                         <li>56 คือ ปีงบประมาณ</li>
@@ -37,15 +38,15 @@ session_start();
                         <li>07 คือ ประภทครุภัณฑ์โฆษณาและเผยแพร่</li>
                         <li>00 คือ กลุ่มย่อย ถ้าไม่มีกลุ่มย่อย จะเป็น 00</li>
                         <li>053 คือ running number</li>
-                        
+
                         <b>ชื่อครุภัณฑ์</b>
-                        <li>เช่น  เครื่องทำลายเอกสาร</li>
+                        <li>เช่น เครื่องทำลายเอกสาร</li>
 
                         <b>รายละเอียดครุภัณฑ์</b>
-                        <li>เช่น  IDEAL 3104</li>
+                        <li>เช่น IDEAL 3104</li>
 
                         <b>รายละเอียดครุภัณฑ์</b>
-                        <li>เช่น  500000</li>
+                        <li>เช่น 500000</li>
 
                         <b>ตำแหน่งครุภัณฑ์ ตัวอย่าง 8504</b>
                         <li>8 คือ ตึก sc.08</li>
@@ -53,10 +54,10 @@ session_start();
                         <li>04 คือ ห้อง 04</li>
 
                         <b>สถานะ</b>
-                        <li>กรอกข้อมูลโดยเลือกจากรายการ เช่น  ปลดระวาง</li>
+                        <li>กรอกข้อมูลโดยเลือกจากรายการ เช่น ปลดระวาง</li>
 
-                        
-                        
+
+
                     </div>
                     <div class="col-3"></div>
                 </div>
@@ -107,8 +108,8 @@ session_start();
 
                                 <div class="col-6">
                                     <label for="email2">รหัสครุภัณฑ์</label>
-                                    <input type="text" name="ItemID" class="form-control" pattern="[0-9]{1,}"
-                                        title="รหัสครุภัณฑ์ ไม่ถูกต้อง" placeholder="xxxxxxxxxxxxx" required>
+                                    <input type="text" name="ItemID" class="form-control" pattern="\d{13}"
+                                        title="รหัสครุภัณฑ์ ไม่ถูกต้อง" placeholder="xxxxxxxxxxxxx"  required>
                                 </div>
 
                                 <div class="col-6">
@@ -125,23 +126,23 @@ session_start();
 
                                 <div class="col-6">
                                     <label for="email2">ราคา</label>
-                                    <input type="text" name="Price" class="form-control" required
+                                    <input type="text" name="Price" class="form-control" 
                                         placeholder="กรอกราคา" />
                                 </div>
 
                                 <div class="col-6">
                                     <label for="email2">ตำเเหน่งของครุภัณฑ์</label>
-                                    <input type="text" name="Building" class="form-control" required
+                                    <input type="text" name="Building" class="form-control" 
                                         placeholder="กรอกตำเเหน่ง" />
                                 </div>
 
                                 <div class="col-6">
                                     <label for="email2">สถานะ</label>
-                                    <select class="custom-select d-block " id="Status" name="Status">
-                                        <option value="ปกติ">ปกติ</option>
-                                        <option value="ไม่ว่าง">ไม่ว่าง</option>
-                                        <option value="ซ่อมบำรุง">ซ่อมบำรุง</option>
-                                        <option value="ปลดระวาง">ปลดระวาง</option>
+                                    <select class="custom-select d-block " id="Statusref" name="Statusref">
+                                        <option value="1">ปกติ</option>
+                                        <option value="2">จำหน่ายออก</option>
+                                        <option value="3">ถูกยืม</option>
+                                        <option value="4">ปลดระวาง</option>
                                     </select>
                                 </div>
 
@@ -160,36 +161,39 @@ session_start();
                     <div class="row">
                         <div class="col-3"></div>
                         <div class="col-6">
+                            <div class="row">
 
-                            <label for="email2"> สิทธิ์อาจารย์</label>
-                            <select class="custom-select d-block " id="TeacherRight" name="TeacherRight">
-                                <option value="อนุญาต">อนุญาต</option>
-                                <option value="ไม่อนุญาต">ไม่อนุญาต</option>
-                            </select>
+                                <div class="col-12">
+                                    <label for="email2"> สิทธิ์อาจารย์</label>
+                                    <select class="custom-select d-block " id="TeacherRight" name="TeacherRight">
+                                        <option value="อนุญาต">อนุญาต</option>
+                                        <option value="ไม่อนุญาต">ไม่อนุญาต</option>
+                                    </select>
+                                </div>
 
-                            <label for="email2">สิทธิ์บุคลากร</label>
-                            <select class="custom-select d-block " id="StaffRight" name="StaffRight">
-                                <option value="อนุญาต">อนุญาต</option>
-                                <option value="ไม่อนุญาต">ไม่อนุญาต</option>
-                            </select>
+                                <div class="col-12">
+                                    <label for="email2">สิทธิ์บุคลากร</label>
+                                    <select class="custom-select d-block " id="StaffRight" name="StaffRight">
+                                        <option value="อนุญาต">อนุญาต</option>
+                                        <option value="ไม่อนุญาต">ไม่อนุญาต</option>
+                                    </select>
 
-                            <label for="email2">สิทธิ์นักศึกษา</label>
-                            <select class="custom-select d-block " id="StudentRight" name="StudentRight">
-                                <option value="อนุญาต">อนุญาต</option>
-                                <option value="ไม่อนุญาต">ไม่อนุญาต</option>
-                            </select>
+                                </div>
 
-                            <!-- สถานะ
-                            <select class="custom-select d-block " id="Status" name="Status">
-                                <option value="ปกติ">ปกติ</option>
-                                <option value="ไม่ว่าง">ไม่ว่าง</option>
-                                <option value="ซ่อมบำรุง">ซ่อมบำรุง</option>
-                                <option value="ปลดระวาง">ปลดระวาง</option>
-                            </select><br> -->
+                                <div class="col-12">
+                                    <label for="email2">สิทธิ์นักศึกษา</label>
+                                    <select class="custom-select d-block " id="StudentRight" name="StudentRight">
+                                        <option value="อนุญาต">อนุญาต</option>
+                                        <option value="ไม่อนุญาต">ไม่อนุญาต</option>
+                                    </select>
+                                </div>
 
-                            <label for="AddDate">วันเวลาที่เพิ่ม (date and time):</label>
-                            <input type="datetime-local" id="birthdaytime" name="AddDate"
-                                class="form-control mb-2 mr-sm-2">
+                                <div class="col-12">
+                                    <label for="AddDate">วันเวลาที่เพิ่ม (date and time):</label>
+                                    <input type="date" id="birthdaytime" name="Add_Date" class="form-control mb-2 mr-sm-2">
+                                </div>
+
+                            </div>
 
                         </div>
                         <div class="col-3"></div>

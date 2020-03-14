@@ -8,9 +8,9 @@
 
     }
 ?>
-<?php include "headtest.php" ?>
+<?php include "HeadAdmin.php" ?>
 
-
+        
 <div class="hcerv my-3 ml-5 mr-5">
 <?php
 	ini_set('display_errors', 1);
@@ -59,32 +59,41 @@
                     <h6>ประเภทครุภัณฑ์ :</h6>&nbsp;&nbsp;
                     <select class="custom-select d-block " id="TypeKeyword" name="TypeKeyword">
                         <option value="">ประเภทครุภัณฑ์</option>
-                        <option value="อาคารถาวร">อาคารถาวร</option>
-                        <option value="อาคารชั่วคราว/โรงเรียน">อาคารชั่วคราว/โรงเรียน</option>
-                        <option value="สิ่งก่อสร้าง">สิ่งก่อสร้าง</option>
-                        <option value="ครุภัณฑ์โรงงาน">ครุภัณฑ์โรงงาน</option>
-                        <option value="ครุภัณฑ์ยานพาหนะและขนส่ง">ครุภัณฑ์ยานพาหนะและขนส่ง</option>
-                        <option value="ครุภัณฑ์ไฟฟ้าและวิทยุ">ครุภัณฑ์ไฟฟ้าและวิทยุ</option>
-                        <option value="ครุภัณฑ์โฆษณาและเผยแพร่">ครุภัณฑ์โฆษณาและเผยแพร่</option>
-                        <option value="ครุภัณฑ์การเกษตร">ครุภัณฑ์การเกษตร</option>
-                        <option value="ครุภัณฑ์โรงงาน">ครุภัณฑ์โรงงาน</option>
-                        <option value="ครุภัณฑ์ก่อสร้าง">ครุภัณฑ์ก่อสร้าง</option>
-                        <option value="ครุภัณฑ์สำรวจ">ครุภัณฑ์สำรวจ</option>
-                        <option value="ครุภัณฑ์วิทยาศาตร์การแพทย์">ครุภัณฑ์วิทยาศาตร์การแพทย์</option>
-                        <option value="ครุภัณฑ์คอมพิวเตอร์">ครุภัณฑ์คอมพิวเตอร์</option>
-                        <option value="ครุภัณฑ์การศึกษา">ครุภัณฑ์การศึกษา</option>
-                        <option value="ครุภัณฑ์งานบ้านงานครัว">ครุภัณฑ์งานบ้านงานครัว</option>
-                        <option value="ครุภัณฑ์กีฬา">ครุภัณฑ์กีฬา</option>
-                        <option value="ครุภัณฑ์ดนตรีและนาฏศิลป์">ครุภัณฑ์ดนตรีและนาฏศิลป์</option>
-                        <option value="ครุภัณฑ์อาวุธ">ครุภัณฑ์อาวุธ</option>
-                        <option value="ครุภัณฑ์สนาม">ครุภัณฑ์สนาม</option>
+                        <?php
+                        // $serverName = "10.199.66.227";
+                        // $userName = "20S2_g4";
+                        // $userPassword = "Dwg7Q6UQ";
+
+                        $serverName = "localhost";
+                        $userName = "root";
+                        $userPassword = "";
+
+                        $dbName = "20s2_g4";
+                        $conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
+                        mysqli_set_charset($conn, "utf8");
+                        $sql = "SELECT * FROM item , type , status 
+                        where item.TypeID = type.ID 
+                        AND item.Statusref = Status.IDst 
+                        AND Status.StatusName LIKE '%".$strKeyword."%'
+                        AND type.TypeName LIKE '%".$TypKeyword."%'"  ;
+                        $query = mysqli_query($conn,$sql);
+
+                        $strSQL = "SELECT * FROM type ";
+                        $result = mysqli_query($conn, $strSQL);
+                        while($objResuut= mysqli_fetch_array($result)) 
+                        {
+                            echo "<option value='" .$objResuut['ID'] . "'>" .$objResuut['TypeName'] . "</option>";
+                        }
+                        ?>
+                        
+                       
                     </select>&nbsp;&nbsp;
                     <h6>สถานะครุภัณฑ์ :</h6>&nbsp;&nbsp;
                     <select class="custom-select d-block " id="txtKeyword" name="txtKeyword">
                         <option value="">รายการทั้งหมด</option>
                         <option value="ปกติ">ปกติ</option>
-                        <option value="ไม่ว่าง">ไม่ว่าง</option>
-                        <option value="ซ่อมบำรุง">ซ่อมบำรุง</option>
+                        <option value="จำหน่ายออก">จำหน่ายออก</option>
+                        <option value="ถูกยืม">ถูกยืม</option>
                         <option value="ปลดระวาง">ปลดระวาง</option>
                     </select>&nbsp;&nbsp;
                     <!--ส่วนค้นหารายการ
@@ -96,9 +105,6 @@
                 </form><br>
             </div>
 
-
-            <a href='Add.php'><button name="add" type="submit" class="btn btn-success my-4" href="Add.php"
-                    style="width: 120px;float:right">เพิ่มครุภัณฑ์</button></a>
 
         </div>
         <br>
@@ -129,22 +135,7 @@
 <div style="display: flex;justify-content: center;">
     <!--ส่วนตารางเเสดงข้อมูล-->
     <div style=" width:1400px; height: 460px; overflow-y: scroll;">
-        <?php
-        // $serverName = "10.199.66.227";
-        // $userName = "20S2_g4";
-        // $userPassword = "Dwg7Q6UQ";
 
-        $serverName = "localhost";
-        $userName = "root";
-        $userPassword = "";
-
-        $dbName = "20s2_g4";
-        $conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
-        mysqli_set_charset($conn, "utf8");
-        $sql = "SELECT * FROM item , type , status where item.TypeID = type.ID AND item.Statusref = Status.IDst AND Status.StatusName LIKE '%".$strKeyword."%'AND type.TypeName LIKE '%".$TypKeyword."%'"  ;
-        $query = mysqli_query($conn,$sql);
-     
-        ?>
         <table class="table center table-hover">
             <tbody>
                 <?php 

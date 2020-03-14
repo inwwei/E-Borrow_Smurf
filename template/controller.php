@@ -1,14 +1,14 @@
 <?php 
 	// $serverName = "10.199.66.227";
-        // $userName = "20S2_g4";
-        // $userPassword = "Dwg7Q6UQ";
+    //     $userName = "20S2_g4";
+    //     $userPassword = "Dwg7Q6UQ";
 
         $serverName = "localhost";
         $userName = "root";
         $userPassword = "";
 
         $dbName = "20s2_g4";
-		$con = mysqli_connect("localhost","root","","20s2_g4");
+		$con = mysqli_connect($serverName,$userName,$userPassword,$dbName);
 		if(!$con){
 			die('Please Check Your Connection'.mysqli_error($con));
 		}

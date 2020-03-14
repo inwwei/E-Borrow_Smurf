@@ -6,24 +6,32 @@ $con= mysqli_connect("localhost","root","","20s2_g4") or die("Error: " . mysqli_
 mysqli_query($con, "SET NAMES 'utf8' ");
 date_default_timezone_set('Asia/Bangkok');
 
-//สร้างตัวแปรสำหรับรับค่า ItemId จากไฟล์แสดงข้อมูล
-$item_id = $_REQUEST["ItemID"];
+//สร้างตัวแปรสำหรับรับค่า status จากไฟล์แสดงข้อมูล
+$ID = $_GET["ID"];
+$Status_ref = $_GET['Statusref'];
+$statuswork = $_GET['statuswork'];
 
-//ลบข้อมูลออกจาก database ตาม ID ที่ส่งมา
-$sql = "DELETE FROM item WHERE ItemID='$item_id' ";
+
+
+//อัพเดทข้อมูลลง database ตาม ID ที่ส่งมา
+$sql = "UPDATE borrowtransection SET Statusref = '1',
+                statuswork = 'ปฏิเสธ'  
+        WHERE ID ='$ID' ";
 $result = mysqli_query($con, $sql) or die ("Error in query: $sql " . mysqli_error());
+    
 
 //แสดงข้อความเมื่อบันทึกเสร็จและกระโดดกลับไปหน้าฟอร์ม
   
   if($result){
   echo "<script type='text/javascript'>";
-  echo "window.location = 'maintain.php'; ";
-  echo "alert('ลบรายการครุภัณฑ์ สำเร็จ');";
+  echo "window.location = 'Request.php'; ";
+  echo "alert('ไม่อนุมัติคำร้อง สำเร็จ');";
   echo "</script>";
   }
   else{
   echo "<script type='text/javascript'>";
-  echo "alert('ลบรายการครุภัณฑ์ ไม่สำเร็จ');";
+  echo "window.location = 'Request.php'; ";
+  echo "alert('อนุมัติคำร้อง ไม่สำเร็จ');";
   echo "</script>";
 }
 ?>

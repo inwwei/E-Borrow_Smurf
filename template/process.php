@@ -31,7 +31,15 @@ if(isset($_POST['username'])){
       header("location:Maintain.php");
 
     }
-    }
+    }else{
+      echo "username or password flase";
+      header("location:index.php");
+  
+    
+    
+  
+  
+  }
     
 
   }else{
