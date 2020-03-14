@@ -28,6 +28,7 @@
             <th scope="col" class="zen" style="width: 140px;">ชื่อนักศึกษา</th>
             <th scope="col" class="zen" style="width: 60px;">สถานะการทำงาน</th>
             <th scope="col" class="zen" style="width: 60px;">สถานะอุปกรณ์</th>
+            <th scope="col" class="zen" style="width: 60px;">เหตุผลการยืม</th>
             
             <!-- <th scope="col" >ปุ่ม</th> -->
             <th scope="col" class="zen" style="width: 115px;">การจัดการ</th>
@@ -70,6 +71,7 @@
                     <td scope="row" class="zen" style="width: 140px;"><?=$row['firstName']?>&nbsp;&nbsp;<?=$row['lastName']?></td>
                     <td scope="row" class="zen" style="width: 80px;"><?=$row['statuswork']?></td>
                     <td scope="row" class="zen" style="width: 80px;"><?=$row['StatusName']?></td>
+                    <td scope="row" class="zen" style="width: 80px;"><?=$row['reason']?></td>
                     
                     
 
@@ -87,14 +89,14 @@
                 }?>
             </tbody>
         </table>
-                <?php if ($temp == 0){
-					    echo  "<p> <font color=red font face='verdana' size='5pt'>ไม่มีรายการคำขออนุมัติ</font> </p>";
-				    }else{
-                        echo  "<p> <font color=black font face='verdana' size='5pt'>รวมทั้งหมด </font>
-                                   <font color=red font face='verdana' size='5pt'>$temp </font>
-                                   <font color=black font face='verdana' size='5pt'>รายการ</font> </p>";
+        <?php if ($temp == 0){
+		            echo  "<p> <font color=red font face='verdana' size='5pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ไม่มีรายการคำขออนุมัติ</font> </p>";
+			  }else{
+                    echo  "<p> <font color=black font face='verdana' size='5pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;รวมทั้งหมด </font>
+                        <font color=red font face='verdana' size='5pt'>$temp </font>
+                        <font color=black font face='verdana' size='5pt'>รายการ</font> </p>";
                     } 
-                ?>
+        ?>
 
                 
     </div>
