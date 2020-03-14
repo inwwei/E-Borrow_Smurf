@@ -59,7 +59,7 @@
 //    $userName = "20S2_g4";
 //    $userPassword = "Dwg7Q6UQ";
 
-   $dbName = "20S2_g4";
+    $dbName = "20S2_g4";
     $conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
     mysqli_set_charset($conn, "utf8");
 	$sql = "SELECT * FROM type"   ;
