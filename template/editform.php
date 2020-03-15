@@ -124,7 +124,20 @@ function fncSubmit() {
                 <?php echo $message ?>
             </div>
             <?php endif;?>
+            <?php
+                        // $serverName = "10.199.66.227";
+                        // $userName = "20S2_g4";
+                        // $userPassword = "Dwg7Q6UQ";
 
+                        $serverName = "localhost";
+                        $userName = "root";
+                        $userPassword = "";
+
+                        $dbName = "20s2_g4";
+                        $conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
+                        mysqli_set_charset($conn, "utf8");
+                       
+                        ?>
 
             <form class="form-horizontal" method="POST" onSubmit="JavaScript:return fncSubmit();">
 
@@ -142,10 +155,12 @@ function fncSubmit() {
 										$TypeID = $row['TypeID'];
 										$res2 = mysqli_query($conn, "SELECT * FROM  type WHERE ID =  $TypeID");
 										$res3 = mysqli_query($conn, "SELECT * FROM  type");
-										while ($row2 = mysqli_fetch_array($res2)) {
-
-										echo "<option value=" . $row2['ID'] . ">" . $row2['TypeName'] . "</option>";
-
+										
+                                        $strSQL = "SELECT * FROM type ";
+                                        $result = mysqli_query($conn, $strSQL);
+                                        while($objResuut= mysqli_fetch_array($result)) 
+                                        {
+                                            echo "<option value='" .$objResuut['ID'] . "'>" .$objResuut['TypeName'] . "</option>";
 										while ($row3 = mysqli_fetch_array($res3)) {
 
 									echo "<option value=" . $row3['ID'] . ">" . $row3['TypeName'] . "</option>";
